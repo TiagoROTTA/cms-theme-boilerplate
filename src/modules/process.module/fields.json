@@ -1,0 +1,219 @@
+[
+    {
+        "label": "Process cards",
+        "name": "process_cards",
+        "type": "group",
+        "occurrence": {
+                "default": 4,
+                "min": 2
+        },
+        "children": [
+            {
+                "label": "Card Icon",
+                "name": "card_icon",
+                "type": "image",
+                "required": false
+            },
+            {
+                "label": "Card Title",
+                "name": "card_title",
+                "type": "text",
+                "required": true,
+                "default": "Here goes the title"
+            },
+            {
+                "label": "Bold Informations",
+                "name": "bold_informations",
+                "type": "text",
+                "required": true,
+                "default": "Here goes the bold informations"
+            },
+            {
+                "label": "Card Description",
+                "name": "card_description",
+                "type": "text",
+                "required": true,
+                "default": "Here goes the description"
+            },
+            {
+                "label": "Button Text",
+                "name": "button_text",
+                "type": "text",
+                "required": false,
+                "description": "Text to display on the button"
+            },
+            {
+                "label": "Button Link",
+                "name": "button_link",
+                "type": "url",
+                "required": false,
+                "description": "URL to open when clicking the button"
+            },
+            {
+                "label": "Example Image",
+                "name": "exemple_image",
+                "type": "image",
+                "required": false
+            }
+        ]
+    },
+    {
+        "label": "Right Arrow",
+        "name": "right_arrow",
+        "type": "image",
+        "required": false
+    },
+    {
+        "label": "Left Arrow",
+        "name": "left_arrow",
+        "type": "image",
+        "required": false
+    },
+    {
+        "label": "Responsive Arrow",
+        "name": "responsive_arrow",
+        "type": "image",
+        "required": false
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Text",
+                "name": "text",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Title Settings",
+                        "name": "title_settings",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Title Font",
+                                "name": "title_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#27234F",
+                                    "font": "Roboto",
+                                    "size": 24,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "700"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Position",
+                                "name": "alignment",
+                                "type": "alignment",
+                                "alignment_direction": "HORIZONTAL",
+                                "default" : {
+                                    "horizontal_align": "LEFT"
+                                }
+                            }
+                        ]
+                    },    
+                    {
+                        "label": "Description Settings",
+                        "name": "description_settings",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Description Font",
+                                "name": "description_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#27234F",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "300"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Position",
+                                "name": "alignment",
+                                "type": "alignment",
+                                "alignment_direction": "HORIZONTAL",
+                                "default" : {
+                                    "horizontal_align": "LEFT"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Bold Informations Settings",
+                        "name": "bold_informations_settings",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Bold Informations Font",
+                                "name": "bold_informations_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#27234F",         
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "500"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Position",
+                                "name": "alignment",
+                                "type": "alignment",
+                                "alignment_direction": "HORIZONTAL",
+                                "default" : {
+                                    "horizontal_align": "LEFT"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Button Settings",
+                        "name": "button_settings",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Button Font",
+                                "name": "button_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 12,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "500"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Button Color",
+                                "name": "button_color",
+                                "type": "color",
+                                "default": "#27234F"
+                            },
+                            {
+                                "label": "Position",
+                                "name": "alignment",
+                                "type": "alignment",
+                                "alignment_direction": "HORIZONTAL",
+                                "default" : {
+                                    "horizontal_align": "CENTER"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,151 @@
+[
+    {
+        "label": "Agency Introduction",
+        "name": "agency_introduction",
+        "type": "group",
+        "children": [
+            {
+                "label": "Title",
+                "name": "title",
+                "type": "text",
+                "required": true,
+                "default": " Une agence <span>digitale</span> et <span>CRM</span> pour les cabinets d’expertise comptable"
+            },
+            {
+                "label": "Description",
+                "name": "description",
+                "type": "text",
+                "required": true,
+                "default": "Notre équipe dévouée est composée de professionnels expérimentés, maîtrisant à la fois les aspects techniques du marketing en ligne et les particularités du domaine comptable. Nous comprenons les défis auxquels sont confrontés les experts-comptables, que ce soit en termes de réglementation, de concurrence ou de gestion de la relation client."
+            },
+            {
+                "label": "Info Cards",
+                "name": "info_cards",
+                "type": "group",
+                "occurrence": {
+                    "min": 1,
+                    "default": 3
+                },
+                "children": [
+                    {
+                        "label": "Number",
+                        "name": "number",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "label": "Description",
+                        "name": "description",
+                        "type": "text",
+                        "required": true
+                    }
+                ],
+                "default": [
+                    {
+                        "number": "+60",
+                        "description": "Cabinets accompagnés"
+                    },
+                    {
+                        "number": "7",
+                        "description": "collaborateurs et collaboratrices"
+                    },
+                    {
+                        "number": "+9",
+                        "description": "ans d'expérience"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Image",
+        "name": "image",
+        "type": "image",
+        "required": false
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Title",
+                        "name": "title",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 35,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "500"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Title Span",
+                        "name": "title_span",
+                        "type": "font",
+                        "default": {
+                            "color": "#E75598",
+                            "font": "Roboto",
+                            "size": 35,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "800"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Description",
+                        "name": "description",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 16,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Info Cards Numbers",
+                        "name": "info_cards_numbers",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Pistilli",
+                            "size": 30,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "400"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Info Cards Description",
+                        "name": "info_cards_description",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 12,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

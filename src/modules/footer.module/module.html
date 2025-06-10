@@ -1,0 +1,96 @@
+{% require_css %}
+<style>
+    .footer-module .footer-text{
+        {{ module.styles.typography.left_column.description_font.css }}
+    }
+
+    .footer-module .bold-information {
+        {{ module.styles.typography.left_column.bold_informations_font.css }}
+    }
+
+    .footer-module .group-title {
+        {{ module.styles.typography.center_column.section_title_font.css }}
+    }
+    .footer-module .group-links a {
+        {{ module.styles.typography.center_column.link_text_font.css }}
+    }
+    .footer-module .right-column-title {
+        {{ module.styles.typography.right_column.title_font.css }}
+    }
+    .footer-module .right-column-address {
+        {{ module.styles.typography.right_column.address_font.css }}
+    }
+    .footer-module .right-column-phone {
+        {{ module.styles.typography.right_column.phone_number_font.css }}
+    }
+    .footer-module .cta-button {
+        text-decoration: none;
+        {{ module.styles.typography.right_column.cta_text_font.css }}
+    }
+
+    .footer-module .cta-button:hover {
+        text-decoration: none;
+        {{ module.styles.typography.right_column.cta_text_font.css }}
+    }
+
+    .center-column .group-links li::before {
+        {{ module.styles.typography.center_column.link_text_font.css }}
+    }
+</style>
+{% end_require_css %}
+
+<section class="footer-module">
+    <div class="footer-container">
+        <div class="left-column">
+            {% if module.left_column.image.src %}
+            <img src="{{ module.left_column.image.src }}" alt="{{ module.left_column.image.alt }}" class="footer-logo">
+            {% else %}
+            <img src="{{ get_asset_url('../../images/hexagone-logo.png') }}" alt="Logo par défaut" class="footer-logo">
+            {% endif %}
+            <p class="footer-text">{{ module.left_column.description }}</p>
+            <p class="bold-information">{{ module.left_column.bold_informations }}</p>
+            <div class="social-media-icons">
+                {% for info in module.left_column.social_media %}
+                    <a href="{{ info.social_media_link }}">
+                        {% if info.social_media_icon.src %}
+                            <img src="{{ info.social_media_icon.src }}" alt="Icône réseau social" class="social-media-icon">
+                        {% else %}
+                            <img src="{{ get_asset_url('../../images/linkedin.png') }}" alt="Icône réseau social par défaut" class="social-media-icon">
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="center-column">
+            {% for group in module.center_column.sections %}
+                <div class="link-group">
+                    <h3 class="group-title">{{ group.section_title }}</h3>
+                    <ul class="group-links">
+                        {% for link in group.links %}
+                            <li>
+                                <a href="{{ link.link_url }}">{{ link.link_text }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="right-column">
+            <h3 class="right-column-title">{{ module.right_column.title}}</h3>
+            <p class="right-column-address">{{ module.right_column.address }}</p>
+            <div class="right-column-contact">
+                {% if module.right_column.phone_icon.src %}
+                    <img src="{{ module.right_column.phone_icon.src }}" alt="{{module.right_column.phone_icon.alt}}" class="phone-icon">
+                {% else %}
+                    <img src="{{ get_asset_url('../../images/phone-icon.png') }}" alt="Icône téléphone par défaut" class="phone-icon">
+                {% endif %}
+                <p class="right-column-phone">{{ module.right_column.phone_number }}</p>
+            </div>
+            <div class="cta-buttons">
+                {% for cta in module.right_column.cta %}
+                    <a href="{{ cta.cta_link }}" class="cta-button">{{ cta.cta_text }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+{% require_css %}
+<style>
+    .recent-articles-module h2 {
+        {{module.styles.typography.title_font.css}}
+    }
+
+    .recent-articles-module h2 span {
+        {{module.styles.typography.span_title_font.css}}
+    }
+
+    .recent-articles-module h3 {
+        {{module.styles.typography.article_title_font.css}}
+    }
+    
+    .recent-articles-module p {
+        {{module.styles.typography.description_font.css}}
+    }
+
+    .recent-articles-module a{
+        {{module.styles.typography.button_font.css}}
+    }
+
+    .recent-articles-module a:hover{
+        {{module.styles.typography.button_font.css}}
+    }
+</style>
+{% end_require_css %}
+
+
+<section class="recent-articles-module">
+    <div class="title fade-in">
+        <h2>{{module.title}}</h2>
+    </div>
+    <div class="custom-blog">        
+    {% set recent_posts = blog_recent_posts('default', 3) %}
+    {% for post in recent_posts %}
+        <div class="blog-post slide-from-bottom">
+            <img src="{{ widget.custom_image_url|default(post.featured_image) }}" alt="{{ post.name }}">
+            <div class="blog-post-inner">
+                <h3>{{ widget.custom_title|default(post.name) }}</h3>
+                <p>{{ post.post_summary|truncate(150) }}</p>
+                <a href="{{ widget.custom_link|default(post.absolute_url) }}" class="read-more">Lire l’article</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</section>

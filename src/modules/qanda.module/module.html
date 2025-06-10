@@ -1,0 +1,29 @@
+{%require_css%}
+<style>
+
+    .qanda-module .qanda-question-text  {
+        {{module.styles.typography.question_font.css}}
+    }
+
+    .qanda-module .qanda-answer {
+        {{module.styles.typography.answer_font.css}}
+    }
+
+</style>
+{%end_require_css%}
+
+<section class="qanda-module">
+  <div class="qanda-list">
+    {% for card in module.question_cards %}
+      <div class="qanda-item fade-in">
+        <button class="qanda-question " type="button">
+          <span class="qanda-toggle-icon">+</span>
+          <span class="qanda-question-text">{{ card.question }}</span>
+        </button>
+        <div class="qanda-answer">
+          {{ card.answer|safe }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

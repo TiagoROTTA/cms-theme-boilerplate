@@ -1,0 +1,20 @@
+.portfolio-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px; /* Ajoute un espace entre les images */
+    flex-wrap: nowrap; /* Empêche le passage en colonne par défaut */
+}
+
+.portfolio-flex img {
+    border-radius: 10px; /* Arrondit les angles des images */
+    max-width: 100%; /* Assure que les images ne débordent pas */
+    height: auto; /* Maintient le ratio des images */
+}
+
+@media (max-width: 768px) {
+    .portfolio-flex {
+        flex-direction: column; /* Passe les images en colonne en mode responsive */
+        align-items: center; /* Centre les images */
+    }
+}

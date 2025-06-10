@@ -1,0 +1,50 @@
+.value-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.value-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(130, 50, 123, 0.2);
+    text-align: left;
+    flex: 1;
+}
+
+.value-image {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+.value-card h3 {
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    margin-bottom: 16px;
+}
+.value-card p strong {
+    font-weight: bold;
+}
+
+
+.value-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.value-button:hover {
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    .value-container {
+        flex-direction: column;
+    }
+}

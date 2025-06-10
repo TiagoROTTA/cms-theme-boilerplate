@@ -1,0 +1,55 @@
+{% require_css %}
+<style>
+    .client-review-module h2 {
+        {{module.styles.typography.title.css}}
+    }
+
+    .client-review-module span {
+        {{module.styles.typography.title_span.css}}
+    }
+
+    .client-review-module .client-review-title p {
+        {{module.styles.typography.description.css}}
+    }
+
+    .client-review-module .client-review-cards .review{
+        {{module.styles.typography.client_review.css}}
+    }
+
+    .client-review-module .client-review-cards .name{
+        {{module.styles.typography.client_name.css}}
+    }
+
+</style>
+
+{% end_require_css %}
+
+<section class="client-review-module">
+    <div class="client-review-title fade-in">
+        {% if module.image.src %}
+            <img src="{{module.image.src}}" alt="{{module.image.alt}}">
+        {% else %}
+            <img src="{{get_asset_url('../../images/client-review-illustration.png')}}" alt="Default logo" class="card-icon">
+        {% endif %}
+        <h2>{{ module.title }}</h2>
+        <p>{{ module.description }}</p>
+    </div>
+    <div class="client-review-cards">
+        {% for card in module.client_review_card %}
+            <div class="client-review-card slide-from-right">
+                <div class="client-review-icon">
+                    {% if card.client_picture.src %}
+                        <img src="{{ card.client_picture.src }}" alt="{{ card.client_picture.alt }}">
+                    {% else %}
+                        <img src="{{ get_asset_url('../../images/grayscale-mountain.png') }}" alt="Default logo" class="card-icon">
+                    {% endif %}
+                </div>
+                <div class="client-review">
+                    <p class="review">{{ card.client_review }}</p>
+                    <p class="name">{{ card.client_name }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</section> 

@@ -1,0 +1,68 @@
+[
+    {
+        "label": "Question Cards",
+        "name": "question_cards",
+        "type": "group",
+        "occurrence":{
+            "min": 2, 
+            "default": 4
+        },
+        "children": [
+            {
+                "label": "Question",    
+                "name": "question",
+                "type": "text",
+                "default": "Question goes here"
+            },
+            {
+                "label": "Answer",
+                "name": "answer",
+                "type": "text",
+                "default": "Answer goes here"
+            }
+        ]
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Question Font",
+                        "name": "question_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 20,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "400"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Answer Font",
+                        "name": "answer_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 15,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

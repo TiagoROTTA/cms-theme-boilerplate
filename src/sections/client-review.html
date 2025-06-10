@@ -1,0 +1,33 @@
+<!--
+  templateType: section
+  label: Client Review Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/custom_section.png
+  description: "Avis clients"
+-->
+{% dnd_section class="client-review-section"%}
+    {% dnd_column %}
+        {% dnd_row %}
+            {% dnd_module
+                path="../modules/client-review",
+                title= {{context.title or 'Ces <span>cabinets</span> nous ont fait confiance et témoignent !  '}},
+                description= {{context.description or 'Nous accompagnons un grand nombre de cabinets avec des problématiques très différentes dans un but précis : transformer votre cabinet !'}},
+                client_review_card= {{context.client_review_card or '[
+                {
+                    client_review : "Spécialiste des professions réglementées Expert-comptables, l’agence est très professionnelle et les résultats sont arrivés plutôt rapidement finalement. J’aime le budget qui s’adapte à tous les besoins! Je recommande à mes confrères!",
+                    client_name : "— Jérémy Renchy, Gérant du cabinet Kardynal"
+                },
+                {
+                    client_review : "Agence de marketing digital avec une approche construite. Très bonne connaissance des particularités des cabinets comptables. Equipe agréable et réactive ! Heureux d’être accompagner par Hexagone Stratégie.",
+                    client_name : "— Aurélien Dos Santos, Gérant du cabinet AURUS"
+                },
+                {
+                    client_review : "Nous sommes réellement satisfaits de notre collaboration avec Hexagone. Que ce soit dans les échanges en amont ou dans le rendu du travail, tout a été simple, limpide et efficace.Merci encore à toute l’équipe pour sa réactivité, son professionnalisme et sa sympathie.Nous referons appel à eux !!!",
+                    client_name : "— Mathilde NIAY, Responsable Communication du cabinet QUINTENS  "
+                }
+                ]'}}
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+{% end_dnd_section %}

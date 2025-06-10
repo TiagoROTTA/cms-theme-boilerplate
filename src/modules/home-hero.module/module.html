@@ -1,0 +1,45 @@
+{% require_css %}
+<style>
+    .home-hero-module .description{
+        {{module.styles.typography.description_font.css}}   
+    }
+
+
+    .home-hero-module .review a{
+        {{module.styles.typography.review_font.css}}   
+        width: 105px;
+    }
+
+    .home-hero-module .hero-button a{
+        {{module.styles.typography.button_font.css}}   
+    }
+
+
+</style>
+{% end_require_css %}
+<section class="home-hero-module fade-in">
+    <div class="description-review">
+        <div class="description">
+            <p>{{module.description}}</p>
+        </div>
+        <div class="review">
+            {% if module.image.src %}
+                <img src="{{module.image.src}}" alt="{{module.image.alt}}">
+            {% else %}
+                <img src="{{get_asset_url('../../images/google-review.png')}}" alt="Default logo" class="card-icon">
+            {% endif %}
+            <a href="{{module.google_review_url}}"> {{module.google_review|upper}}</a>
+        </div>
+    </div>
+    <div class="hero-button">
+        <a href="{{module.button_link}}" class="btn">
+            {{module.button_text}}
+            <span class="btn-arrow">
+                <svg viewBox="0 0 27.52 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M18.5222 0L17.8069 0.714784L25.585 8.49403L0 8.49403L0 9.50597L25.5863 9.50597L17.8069 17.2839L18.5222 18L27.522 9.00024L18.5222 0Z"
+                        fill="white"/>
+                </svg>
+            </span>
+        </a>
+    </div>
+</section>

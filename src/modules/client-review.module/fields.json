@@ -1,0 +1,132 @@
+[
+    {
+        "label": "Image",
+        "name": "image",
+        "type": "image"
+    },
+    {
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "default": "Title goes here"
+    },
+    {
+        "label": "description",
+        "name": "description",
+        "type": "text",
+        "default": "Description goes here"
+    },
+    {
+        "label": "Client Review Card",
+        "name": "client_review_card",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "default": 3
+        },
+        "children": [
+            {
+                "label": "Client Picture",
+                "name": "client_picture",
+                "type": "image"
+            },
+            {
+                "label": "Client Review",
+                "name": "client_review",
+                "type": "text",
+                "default": "Client Review goes here"
+            },
+            {
+                "label": "Client name",
+                "name": "client_name",
+                "type": "text",
+                "default": "Client name goes here"
+            }
+        ]
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Title",
+                        "name": "title",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 35,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "500"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Title Span",
+                        "name": "title_span",
+                        "type": "font",
+                        "default": {
+                            "color": "#E75598",
+                            "font": "Roboto",
+                            "size": 35,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "800"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Description",
+                        "name": "description",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 16,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Client Review",
+                        "name": "client_review",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 16,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Client Name",
+                        "name": "client_name",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 16,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "700"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

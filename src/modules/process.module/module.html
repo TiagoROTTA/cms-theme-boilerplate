@@ -1,0 +1,86 @@
+{%require_css%}
+<style>
+    .process-card h3{
+        {{module.styles.text.title_settings.title_font.css}}
+        text-align: {{module.styles.text.title_settings.alignment.horizontal_align}};
+    }
+
+    .process-card .card-description{
+        {{module.styles.text.description_settings.description_font.css}}
+       text-align: {{module.styles.text.description_settings.alignment.horizontal_align}};
+    }
+
+    .process-card .bold-informations{
+        {{module.styles.text.bold_informations_settings.bold_informations_font.css}}
+        text-align: {{module.styles.text.bold_informations_settings.alignment.horizontal_align}};
+    }
+
+    .process-card .button-link{
+        {{module.styles.text.button_settings.button_font.css}}
+    }
+
+</style>
+{%end_require_css%}
+
+<section class="process-module">
+    <div class="process-container">
+        {%set group_size = module.process_cards|length%}
+        
+        {%for item in module.process_cards%}
+            {% set idx = loop.index0|add(1) %}
+            {% if idx % 2 == 1 %}
+                {% set position = "left" %}
+                {% set slide_class = "slide-from-right" %}
+            {% else %}
+                {% set position = "right" %}
+                {% set slide_class = "slide-from-left" %}
+            {% endif %}
+            {% if loop.last %}
+            <div class="card-container {{slide_class}}" style="margin-top: 45px;">
+            {% else %}
+            <div class="card-container {{slide_class}}">
+            {% endif %}
+                <div class="process-card {{position}}">
+                    {% if item.card_icon.src %}
+                        <img src="{{ item.card_icon.src }}" alt="{{ item.card_icon.alt }}" />
+                    {% else %}
+                        <img src="{{ get_asset_url('../../images/process-logos/process-card-' ~ (idx) ~ '.png') }}" alt="Logo étape {{ idx }}" />
+                    {% endif %}
+                <div class="text-content">
+                    <h3>{{item.card_title}}</h3>
+                    <p class="bold-informations">{{item.bold_informations}}</p>
+                    <p class="card-description">{{item.card_description}}</p>
+                
+                    {% if item.exemple_image.src %}
+                        <img src="{{ item.exemple_image.src }}" alt="{{ item.exemple_image.alt }}" />
+                    {% endif %}
+                    {% if item.button_text %}
+                        <a  href="{{ item.button_link.url|escape_html }}" class="button-link">{{ item.button_text|escape_html }}</a>
+                    {% endif %}
+                </div>
+            </div>
+            <!--la position sera inversée pour les flèches
+            (la classe sera gauche pour une flèche à droite et inversement pour une flèche à gauche)-->
+            
+            <div class="arrow {{position}}"> 
+                {% if not loop.last %}
+                    <img class="responsive-arrow" src="{{get_asset_url('../../images/process-logos/responsive-arrow.png')}}" alt="Responsive Arrow" />
+                    {% if position == "left" %}
+                        {% if module.right_arrow.src%}
+                            <img class="right-arrow" src="{{ module.right_arrow.src }}" alt="{{ module.right_arrow.alt }}" />
+                        {% else %}
+                            <img class="right-arrow" src="{{ get_asset_url('../../images/process-logos/right-arrow.png') }}" alt="Right Arrow" />
+                        {% endif %}
+                    {% else %}
+                        {% if module.left_arrow.src%}
+                            <img class="left-arrow" src="{{ module.left_arrow.src }}" alt="{{ module.left_arrow.alt }}" />
+                        {% else %}
+                            <img class="left-arrow" src="{{ get_asset_url('../../images/process-logos/left-arrow.png') }}" alt="Left Arrow" />
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            </div> 
+        </div>           
+        {%endfor%}
+    </div>
+</section>

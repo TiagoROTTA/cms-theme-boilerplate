@@ -1,0 +1,43 @@
+<!--
+  templateType: section
+  label: Value Proposition Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/custom_section.png
+  description: "Description de la valeur apportée par le service."
+-->
+
+{% dnd_section class = "value-proposition-section" %}
+    {% dnd_column %}
+        {% dnd_row %}
+            {% dnd_module
+                path="@hubspot/rich_text",
+                html={{ context.heading or '<h2>Pourquoi créer un <span>site vitrine pour votre cabinet</span> d’expertise-comptable ? </h2>' }}
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        
+        {% dnd_row %}
+            {% dnd_module 
+                path="../modules/value-proposition", 
+                label="Value Proposition Module",
+                value_card=[
+                    {
+                        "value_title": "Acquérir de nouveaux clients",
+                        "value_description": "Le <strong>bouche-à-oreille</strong> est un puissant levier d’acquisition pour les cabinets d’expertise comptable. Mais un site web bien conçu peut aller encore plus loin : il <strong>renforce votre visibilité en ligne</strong> et <strong>attire de nouveaux clients</strong> qui, sans lui, n’auraient peut-être jamais entendu parler de vous."
+                    },
+                    {
+                        "value_title": "Rassurer vos prospects et partenaires",
+                        "value_description": "Vos clients vous recommandent régulièrement ? C’est excellent ! Mais <strong>une présence en ligne quasi inexistante peut freiner certains prospects</strong>. Aujourd’hui, ne pas être visible en ligne peut susciter des doutes. Un site web bien conçu informe, rassure et renforce votre crédibilité."
+                    },
+                    {
+                        "value_title": "Attirer des candidats et recruter",
+                        "value_description": "Le recrutement est une problématique dans votre cabinet ? Votre <strong>site web</strong> peut vous aider et devenir une partie à part entière dans votre <strong>processus de recrutement</strong> via la création d’un espace carrière !",
+                        "button_text": "Voir nos réalisations de site carrière",
+                        "button_link": "#"
+                    }
+                ]
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+{% end_dnd_section %}

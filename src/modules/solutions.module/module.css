@@ -1,0 +1,164 @@
+.solutions-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    /* Supprime la limitation de largeur */
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.solution-card {
+    width: 325px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0 rgba(130, 50, 123, 0.25);
+    padding: 28px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: none;
+    min-width: 0;
+    border: none;
+    transition: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex: 0 1 325px;
+}
+
+.solution-card-middle {
+    transform: translateY(72px);
+}
+
+.title-container {
+    display: flex;
+    align-items: center; /* centrer verticalement le titre par rapport à l'image */
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.title h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: #2d2154;
+}
+
+.solution-listing {
+    width: 100%;
+    margin: 0 0 18px 0;
+}
+
+.solution-listing .description{
+    margin-top: 0;
+}
+
+.solution-listing > p {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.solutions-module .card-description {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.solutions-module .card-description li {
+    display: flex;
+    align-items: center;
+    font-size: 0.98rem;
+    color: #2d2154;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 28px;
+}
+
+.solutions-module .card-description li:before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.607 8.34148C16.607 12.9274 12.8894 16.645 8.30352 16.645C3.71761 16.645 0 12.9274 0 8.34148C0 3.75557 3.71761 0.0379639 8.30352 0.0379639C12.8894 0.0379639 16.607 3.75557 16.607 8.34148ZM11.6501 5.82524C11.8933 6.06845 11.8933 6.46276 11.6501 6.70594L7.49833 10.8577C7.25512 11.1009 6.86087 11.1009 6.61763 10.8577L4.95693 9.197C4.71373 8.95379 4.71373 8.55953 4.95693 8.31632C5.20013 8.07311 5.59445 8.07311 5.83765 8.31632L7.05799 9.53661L8.91366 7.68094L10.7694 5.82524C11.0126 5.58204 11.4069 5.58204 11.6501 5.82524Z" fill="url(%23paint0_linear_18_2051)" opacity="1"/><defs><linearGradient id="paint0_linear_18_2051" x1="8.30352" y1="0.0379639" x2="8.30352" y2="16.645" gradientUnits="userSpaceOnUse"><stop stop-color="%23C74C8B"/><stop offset="1" stop-color="%233A4C88"/></linearGradient></defs></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    opacity: 1;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.button-container .solution-btn {
+    background: #27234F;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    width: 90%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(80, 37, 196, 0.08);
+    text-align: center;
+    text-decoration: none;;
+}
+
+
+
+@media (max-width: 1183px) {
+    .solutions-cards {
+        justify-content: center;
+    }
+    .solution-card {
+        flex: 0 1 45%;
+    }
+    .solution-card-middle {
+        transform: none;
+    }
+    .solution-card-lowered {
+        transform: none;
+    }
+    .solution-card-middle.visible{
+        transform: translateY(0) !important;
+    }
+}
+
+@media (max-width: 819px) {
+    .solution-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex: 1 1 100%;
+    }
+    .solution-card-middle {
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .solutions-cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .solution-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex: 1 1 100%;
+    }
+}

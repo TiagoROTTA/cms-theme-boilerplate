@@ -1,0 +1,26 @@
+{# Module styles #}
+
+{% require_css %}
+  <style>
+    .button{
+      {{module.styles.text.font.css}}
+    }
+
+    .button-wrapper .button:hover,
+    .button-wrapper .button:focus {
+      {{module.styles.text.font.css}}
+    }
+
+    .button-wrapper{
+      justify-content: {{module.styles.alignment.alignment.horizontal_align}};
+    }
+
+
+  </style>
+{% end_require_css %}
+
+
+
+<div class="button-wrapper">
+  <a class="button" href="{{ href|escape_url }}">{{ module.button_text|escape_html }}</a>
+</div>

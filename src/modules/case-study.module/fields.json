@@ -1,0 +1,493 @@
+[
+    {
+        "type": "image",
+        "label": "Client Review Image",
+        "name": "first_client_logo",
+        "required": true,
+        "description": "Upload an image for the client review section."
+    },
+    {
+        "type": "text",
+        "label": "Client Review",
+        "name": "first_client_review",
+        "required": true,
+        "description": "Enter the client review text.",
+        "default": "L’équipe a parfaitement compris mes besoins et a créé un site à mon image. Moderne, clair et efficace, il m’aide à attirer de nouveaux clients et à rassurer mes prospects. Un vrai plus pour mon cabinet !"
+    },
+    {
+        "type": "text",
+        "label": "Client Name",
+        "name": "first_client_name",
+        "required": true,
+        "description": "Enter the name of the client.",
+        "default": "— Cabinet Tandem Stratégie "
+    },
+    {
+        "type": "image",
+        "label": "Client Review Image",
+        "name": "second_client_logo",
+        "required": true,
+        "description": "Upload an image for the client review section."
+    },
+    {
+        "type": "text",
+        "label": "Client Review",
+        "name": "second_client_review",
+        "required": true,
+        "description": "Enter the client review text.",
+        "default": "Grâce à notre nouveau site carrière, nous recevons des candidatures plus qualifiées et attirons des talents qui partagent nos valeurs. L’expérience candidat a été totalement repensée, et cela fait toute la différence. Un vrai levier pour notre marque employeur !"
+    },
+    {
+        "type": "text",
+        "label": "Client Name",
+        "name": "second_client_name",
+        "required": true,
+        "description": "Enter the name of the client.",
+        "default": "— Cabinet Tandem Stratégie"
+    },
+    {
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "required": true,
+        "default": "Etude de cas"
+    },
+    {
+        "label": "secondary title",
+        "name": "secondary_title",
+        "type": "text",
+        "required": true,
+        "default": "Création du site web du cabinet Tandem Stratégie."
+    },
+    {
+        "label": "Description",
+        "name": "description",
+        "type": "text",
+        "required": true,
+        "default": "Tandem Stratégie est un cabinet d’expertise comptable spécialisé dans l’accompagnement des sites e-commerce.<br>Problématique : Le cabinet doit attirer de nouveaux clients pour se développer."
+    },
+    {
+        "label": "Solution",
+        "name": "solution",
+        "type": "text",
+        "required": true,
+        "default": "<strong>Solution apportée :</strong> <br>Création d’un site sur-mesure avec la mise en avant d’une offre dédiée aux e-commerçants, accompagné d’une campagne Ads."
+    },
+    {
+        "label": "Result",
+        "name": "result",
+        "type": "text",
+        "required": true,
+        "default": "<strong>Resultats</strong>"
+    },
+    {
+        "label": "Results",
+        "name": "results",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "max": 4
+        },
+        "children": [
+            {
+                "label": "Result Title",
+                "name": "result_title",
+                "type": "text",
+                "required": true
+            },
+            {
+                "label": "Result Description",
+                "name": "result_description",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "default": [
+            {
+                "result_title": "<strong>+ 260</strong> leads générés en 1an et demi*",
+                "result_description": "depuis le site internet"
+            },
+            {
+                "result_title": "<strong>+ 50</strong> de lettre de mission signées*", 
+                "result_description": "grâce aux leads générés via le site internet"
+            }
+        ]
+    },
+    {
+        "label": "Footer Note",
+        "name": "footer_note",
+        "type": "text",
+        "required": false,
+        "default": "*La création du site a été appuyée par une campagne Google Ads."
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "First Client Review",
+                "name": "first_client_review",
+                "type": "group",
+                "children":[
+                    {
+                        "label": "Background Image",
+                        "name": "first_background_image",
+                        "type": "image",
+                        "required": false
+                    },
+                    {
+                        "label": "Typography",
+                        "name": "typography",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Client review",
+                                "name": "review",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 12,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "400"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Client name",
+                                "name": "client_name",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 11,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "700"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Padding",
+                        "name": "padding",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Top",
+                                "name": "padding_top",
+                                "type": "number",
+                                "default": 60,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Right",
+                                "name": "padding_right",
+                                "type": "number",
+                                "default": 20,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Bottom",
+                                "name": "padding_bottom",
+                                "type": "number",
+                                "default": 60,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Left",
+                                "name": "padding_left",
+                                "type": "number",
+                                "default": 20,
+                                "unit": "px"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+            "label": "Second Client Review",
+                "name": "second_client_review",
+                "type": "group",
+                "children":[
+                    {
+                        "label": "Background Image",
+                        "name": "background_image",
+                        "type": "image",
+                        "required": false
+                    },
+                    {
+                        "label": "Typography",
+                        "name": "typography",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Client review",
+                                "name": "review",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 12,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "400"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Client name",
+                                "name": "client_name",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 11,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "700"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Padding",
+                        "name": "padding",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Top",
+                                "name": "padding_top",
+                                "type": "number",
+                                "default": 60,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Right",
+                                "name": "padding_right",
+                                "type": "number",
+                                "default": 20,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Bottom",
+                                "name": "padding_bottom",
+                                "type": "number",
+                                "default": 60,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Left",
+                                "name": "padding_left",
+                                "type": "number",
+                                "default": 20,
+                                "unit": "px"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "label":"Case Study Group",
+                "name":"case_study",
+                "type":"group",
+                "children":[
+                    {
+                        "label": "Background Image",
+                        "name": "background_image",
+                        "type": "image",
+                        "required": false
+                    },
+                    {
+                        "label": "Typography",
+                        "name": "typography",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Main Title",
+                                "name": "main_title",
+                                "type": "group",
+                                "children": [
+                                    {
+                                        "label": "Font",
+                                        "name": "font",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 18,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "600"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Secondary Title",
+                                "name": "secondary_title",
+                                "type": "group",
+                                "children": [
+                                    {
+                                        "label": "Font",
+                                        "name": "font",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 25,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "600"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Text",
+                                "name": "text",
+                                "type": "group",
+                                "children": [
+                                    {
+                                        "label": "Font",
+                                        "name": "font",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 14,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "300"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "label": "Bold",
+                                        "name": "bold",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 14,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "bold"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "label": "Post Mortem",
+                                        "name": "post_mortem",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 11,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "normal",
+                                                "text-decoration": "underline"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "Box Text",
+                                "name": "box_text",
+                                "type": "group",
+                                "children": [
+                                    {
+                                        "label": "Main Font",
+                                        "name": "main_font",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 18,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "normal"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "label": "Bold Font",
+                                        "name": "bold_font",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 18,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "bold"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "label": "Description Font",
+                                        "name": "description_font",
+                                        "type": "font",
+                                        "default": {
+                                            "color": "#FFFFFF",
+                                            "font": "Roboto",
+                                            "size": 11,
+                                            "size_unit": "px",
+                                            "styles": {
+                                                "font-weight": "400"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Padding",
+                        "name": "padding",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Top",
+                                "name": "padding_top",
+                                "type": "number",
+                                "default": 40,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Right",
+                                "name": "padding_right",
+                                "type": "number",
+                                "default": 70,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Bottom",
+                                "name": "padding_bottom",
+                                "type": "number",
+                                "default": 40,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Left",
+                                "name": "padding_left",
+                                "type": "number",
+                                "default": 70,
+                                "unit": "px"
+                            }
+                        ]
+                    }
+                ]
+            }            
+        ]
+    }
+]

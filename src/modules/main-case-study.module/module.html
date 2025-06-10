@@ -1,0 +1,53 @@
+{%require_css%}
+<style>
+    .card-title {
+        {{module.styles.typography.title_settings.title_font.css}}
+        text-align: {{module.styles.typography.title_settings.alignment.horizontal_align}};
+    }
+
+    .card-description li{
+        {{module.styles.typography.description_settings.description_font.css}}
+    }
+
+    .card-button {
+        {{module.styles.typography.button_settings.button_font.css}}
+        background-color: {{module.styles.typography.button_settings.button_color}};
+    }
+
+    .card-button:hover{
+        {{module.styles.typography.button_settings.button_font.css}}
+        background-color: {{module.styles.typography.button_settings.button_color}};
+    }
+
+</style>
+{%end_require_css%}
+
+<section class="card-section">
+    <div class="card-container">
+        {% for card in module.case_study_cards %}
+            {% set card_index = loop.index0 %}
+            {% set animation_class = "" %}
+            {% if card_index == 0 %}
+                {% set animation_class = "slide-from-left" %}
+            {% elif card_index == 1 %}
+                {% set animation_class = "slide-from-bottom" %}
+            {% elif card_index == 2 %}
+                {% set animation_class = "slide-from-right" %}
+            {% endif %}
+            <div class="card {{ animation_class }}">
+                {% if card.logo.src %}
+                    <img src="{{ card.logo.src }}" alt="{{ card.logo.alt }} icon" class="card-icon">
+                {% else %}
+                    <img src="{{get_asset_url('../../images/main-case-study-client-logo.png')}}" alt="Default logo" class="card-icon">
+                {% endif %}
+                <h3 class="card-title">{{ card.card_title }}</h3>
+                <ul class="card-description">
+                {%for text in card.card_description %}
+                    <li>{{ text.description_text }}</li>
+                {% endfor %}
+                </ul>
+                <a href="{{ card.button_link|escape_html }}" class="card-button">{{ card.button_text|escape_html }}</a>
+            </div>
+        {% endfor %}
+    </div>
+</section>

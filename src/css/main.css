@@ -5,6 +5,9 @@ Any animations, or functions used throughout the project.
 Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
 */
 
+{% include './tools/_animations.css' %}
+{% include './tools/_fonts.css' %}
+
 /* Generic
 This is where reset, normalize & box-sizing styles go.
 */
@@ -40,3 +43,5 @@ Helper classes with ability to override anything that comes before it
 */
 
 {% include './utilities/_helper.css' %}
+
+

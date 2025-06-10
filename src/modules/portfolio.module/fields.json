@@ -1,0 +1,15 @@
+[
+    {
+        "label": "First Picture",
+        "name": "first_picture",
+        "type": "image",
+        "required": true
+    },
+    {
+        "label": "Second Picture",
+        "name": "second_picture",
+        "type": "image",
+        "required": true
+    }
+
+]

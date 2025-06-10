@@ -1,0 +1,17 @@
+{
+    "label": "Team card",
+    "css_assets": [],
+    "external_js": [],
+    "global": false,
+    "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
+    "icon": "../../images/module-icons/team.svg",
+    "js_assets": [],
+    "other_assets": [],
+    "smart_type": "NOT_SMART",
+    "tags": ["team", "collaboration"],
+    "is_available_for_new_content": true,
+    "categories": [
+      "Commerce"
+    ]
+  }
+  

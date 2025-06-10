@@ -1,0 +1,65 @@
+[
+  {
+    "label": "Button link",
+    "name": "link",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "",
+        "type": "EXTERNAL"
+      }
+    }
+  },
+  {
+    "label": "Button text",
+    "name": "button_text",
+    "type": "text",
+    "required": true,
+    "default": "Prenons RDV !"
+  },
+  {
+    "label": "Styles",
+    "name": "styles",
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "label": "Text",
+        "name": "text",
+        "type": "group",
+        "children": [
+          {
+            "label": "Font",
+            "name": "font",
+            "type": "font",
+            "default":{
+              "color": "#FFFFFF",
+              "font": "Roboto",
+              "size": 20,
+              "size_unit": "px",
+              "styles": {
+                  "font-weight": "600"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "label": "Alignment",
+        "name": "alignment",
+        "type": "group",
+        "children": [
+          {
+            "label": "Alignment",
+            "name": "alignment",
+            "type": "alignment",
+            "alignment_direction": "HORIZONTAL",
+            "default" : {
+              "horizontal_align": "LEFT"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

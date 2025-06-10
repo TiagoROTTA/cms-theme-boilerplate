@@ -1,0 +1,319 @@
+.footer-module .footer-logo {
+    width: 220px;
+    margin-bottom: 0;
+    display: block;
+}
+
+.footer-module {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.footer-module > .left-column,
+.footer-module > .center-column,
+.footer-module > .right-column {
+    /* Pour le fallback si pas de container */
+}
+
+.footer-module .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Important : aligne le haut des colonnes */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 0;
+    column-gap: 117px;
+}
+
+.left-column,
+.center-column,
+.right-column {
+    flex: 1 1 0;
+    max-width: 33.3333%;
+    width: 33.3333%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* Ajouté pour forcer le début en haut */
+}
+
+.footer-text {
+    margin-bottom: 5px;
+    padding-right: 30px;
+
+}
+
+.bold-information {
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+.footer-social-title {
+    margin-bottom: 10px;
+}
+
+.left-column a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+}
+
+.social-media-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    background: none;
+    padding: 0;
+    object-fit: contain;
+    transition: none;
+    display: block;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left-column {
+    /* Pour s'assurer que les icônes sont bien en ligne */
+    gap: 0;
+}
+
+.left-column a + a {
+    margin-left: 16px;
+}
+
+.center-column {
+    flex: 1 1 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    align-items: flex-start;
+}
+
+.link-group {
+    margin-bottom: 0;
+}
+
+.group-title,
+.right-column-title {
+    background: #fff;
+    border-radius: 5px;
+    padding: 4px 24px;
+    text-align: center;
+    margin-bottom: 12px;
+    min-width: 220px;
+    width: 240px; /* Largeur fixe identique pour tous */
+    max-width: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    box-sizing: border-box; /* Ajouté */
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 10px;
+    align-items: stretch;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    max-width: 288px;
+    padding: 10px 24px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: none;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+.group-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.group-links li {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.group-links li a {
+    text-decoration: none;
+    transition: none;
+}
+
+.group-links li a:hover,
+.group-links li a:focus {
+    text-decoration: none;
+}
+
+.center-column .group-links li {
+    margin-bottom: 6px;
+    text-align: left;
+    position: relative;
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.center-column .group-links li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+.right-column {
+    flex: 0 0 28%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.right-column-address {
+    margin-bottom: 18px;
+    margin-top: 5px;
+}
+
+.right-column-contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 10px;
+}
+
+.phone-icon {
+    width: 20px;
+    height: 20px;
+    background: none;
+    padding: 0;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.right-column-phone {
+    text-decoration: underline;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .footer-module .footer-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+        column-gap: 0;
+    }
+    .left-column,
+    .center-column,
+    .right-column {
+        max-width: 100%;
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .group-title,
+    .right-column-title {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        padding-left: 0;
+    }
+    .cta-buttons {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-module {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+    .left-column,
+    .center-column,
+    .right-column {
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-module .group-title,
+    .footer-module .right-column-title {
+        width: 240px !important;
+        min-width: 240px !important;
+        max-width: 240px !important;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer-module {
+        padding: 40px 0 20px 0;
+    }
+    .footer-module .footer-container {
+        flex-direction: column;
+        gap: 28px;
+        padding: 0 10px;
+    }
+    .left-column,
+    .center-column,
+    .right-column {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .footer-text,
+    .bold-information,
+    .footer-social-title,
+    .right-column-address,
+    .right-column-phone {
+        text-align: left;
+    }
+}

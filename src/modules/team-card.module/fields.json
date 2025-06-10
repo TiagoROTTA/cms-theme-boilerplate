@@ -1,0 +1,314 @@
+[
+    {
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "required": true,
+        "default": "Votre <span>équipe</span> type lors de <span>la création de votre site web</span>"
+    
+    },
+    {
+      "label": "Team card",
+      "name": "team_card",
+      "type": "group",
+      "occurrence": {
+        "default": 4,
+        "min": 1
+      },
+      "children": [
+        {
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "required": true  
+        },
+        {
+            "label": "Job title",
+            "name": "job_title",
+            "type": "text",
+            "required": true,
+            "default": "Job title"
+        },
+        {
+            "label": "Job destcription",
+            "name": "job_description",
+            "type": "text",
+            "required": true,
+            "default": "Job description goes here"
+        }
+    ],
+    "default":[
+        {
+            "job_title": "Gestion de projet",
+            "job_description": "Un account manager qui assure le suivi du projet, la planification des points intermédiaires et la livraison des différents rendus. "
+        },
+        {
+            "job_title": "Direction artistique",
+            "job_description": "Un webdesigner pour créer votre site et proposer la structure la plus approprié à votre cabinet"
+        },
+        {
+            "job_title": "SEO",
+            "job_description": "Une rédactrice SEO pour s’assurer que votre site internet est bien adapté aux exigences des moteurs de recherche. "
+        },
+        {
+            "job_title": "Développement",
+            "job_description": "Un webdevelopper pour développer le site de votre cabinet lorsque les maquettes sont validés. "
+        }
+    ]
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Titre",
+                "name": "title",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Position",
+                        "name": "alignment",
+                        "type": "alignment",
+                        "alignment_direction": "HORIZONTAL",
+                        "default" : {
+                            "horizontal_align": "CENTER"
+                        }
+                    },
+                    {
+                        "label": "Police",
+                        "name": "font_family",
+                        "type": "font",
+                        "default": {
+                            "color": "#ffffff",
+                            "font": "Roboto",
+                            "size": 32,
+                            "size_unit": "px",
+                            "styles": {
+                            "font-weight": "100"
+                            }
+                        }
+                    }                                       
+                ]                
+            },
+            {
+                "label": "Team Card Settings",
+                "name": "team_card_settings",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Gap Between Columns",
+                        "name": "column_gap",
+                        "type": "number",
+                        "default": 20,
+                        "unit": "px"
+                    },
+                    {
+                        "label": "Padding",
+                        "name": "padding",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Top",
+                                "name": "padding_top",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Right",
+                                "name": "padding_right",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Bottom",
+                                "name": "padding_bottom",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Left",
+                                "name": "padding_left",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Job Title",
+                        "name": "job_title",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Position",
+                                "name": "alignment",
+                                "type": "alignment",
+                                "alignment_direction": "HORIZONTAL",
+                                "default" : {
+                                    "horizontal_align": "CENTER"
+                                }
+                            },
+                            {
+                                "label": "Police",
+                                "name": "font_family",
+                                "type": "font",
+                                "default": {
+                                    "color": "#ffffff",
+                                    "font": "Roboto",
+                                    "size": 20,
+                                    "size_unit": "px",
+                                    "styles": {
+                                    "font-weight": "700"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Job Description",
+                        "name": "job_description",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Position",
+                                "name": "alignment",
+                                "type": "alignment",
+                                "alignment_direction": "HORIZONTAL",
+                                "default" : {
+                                    "horizontal_align": "CENTER"
+                                }
+                            },
+                            {
+                                "label": "Police",
+                                "name": "font_family",
+                                "type": "font",
+                                "default": {
+                                    "color": "#ffffff",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                    "font-weight": "400"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Image Settings",
+                        "name": "image_settings",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Size",
+                                "name": "image_size",
+                                "type": "number",
+                                "default": 80,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Border Radius",
+                                "name": "image_border_radius",
+                                "type": "number",
+                                "default": 50,
+                                "unit": "%"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Section Settings",
+                "name": "section_settings",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Padding",
+                        "name": "padding",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Top",
+                                "name": "padding_top",
+                                "type": "number",
+                                "default": 100,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Right",
+                                "name": "padding_right",
+                                "type": "number",
+                                "default": 30,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Bottom",
+                                "name": "padding_bottom",
+                                "type": "number",
+                                "default": 100,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Left",
+                                "name": "padding_left",
+                                "type": "number",
+                                "default": 30,
+                                "unit": "px"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Margin",
+                        "name": "margin",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Top",
+                                "name": "margin_top",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Right",
+                                "name": "margin_right",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Bottom",
+                                "name": "margin_bottom",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            },
+                            {
+                                "label": "Left",
+                                "name": "margin_left",
+                                "type": "number",
+                                "default": 10,
+                                "unit": "px"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Alignment",
+                        "name": "section_alignment",
+                        "type": "alignment",
+                        "alignment_direction": "HORIZONTAL",
+                        "default" : {
+                            "horizontal_align": "CENTER"
+                        }
+                    }
+                ]
+            }
+                    
+        ]
+    }
+]

@@ -1,0 +1,169 @@
+[
+    {
+        "label": "Value Cards",
+        "name": "value_card",
+        "type": "group",
+        "occurrence": {
+          "default": 3,
+          "min": 1
+        },
+        "children": [
+            {
+                "label": "Image",
+                "name": "image",
+                "type": "image",
+                "required": false  
+            },
+            {
+                "label": "Value Title",
+                "name": "value_title",
+                "type": "text",
+                "required": true,
+                "description": "Job title"
+            },
+            {
+                "label": "Value Destcription",
+                "name": "value_description",
+                "type": "text",
+                "required": true,
+                "description": "Value description"
+            },
+            {
+                "label": "Button Text",
+                "name": "button_text",
+                "type": "text",
+                "required": false,
+                "description": "Text to display on the button"
+            },
+            {
+                "label": "Button Link",
+                "name": "button_link",
+                "type": "url",
+                "required": false,
+                "description": "URL to navigate when the button is clicked"
+            }
+            
+        ],
+        "default":[
+            {
+                "value_title": "Acquérir de nouveaux clients ",
+                "value_description": "Le <strong>bouche-à-oreille</strong> est un puissant levier d’acquisition pour les cabinets d’expertise comptable. Mais un site web bien conçu peut aller encore plus loin : il <strong>renforce votre visibilité en ligne</strong> et <strong>attire de nouveaux clients</strong> qui, sans lui, n’auraient peut-être jamais entendu parler de vous."
+            },
+            {
+                "value_title": "Rassurer vos prospects et partenaires",
+                "value_description": "Vos clients vous recommandent régulièrement ? C’est excellent ! Mais <strong>une présence en ligne quasi inexistante peut freiner certains prospects</strong>. Aujourd’hui, ne pas être visible en ligne peut susciter des doutes. Un site web bien conçu informe, rassure et renforce votre crédibilité."
+            },
+            {
+                "value_title": "Attirer des candidats et recruter",
+                "value_description": "Le recrutement est une problématique dans votre cabinet ? Votre <strong>site web</strong> peut vous aider et devenir une partie à part entière dans votre <strong>processus de de recrutement</strong> via la création d’un espace carrière !",
+                "button_text": "Voir nos réalisations de site carrière",
+                "button_link": "#"
+            }
+        ]
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [            
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Title Font",
+                        "name": "title_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 25,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "400"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Description Font",
+                        "name": "description_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 14,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Button font",
+                        "name": "button_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 12,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "500"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "label":"Cards Background Color",
+                "name":"cards_background_color",
+                "type":"color",
+                "default":"#FFFFFF"
+            },
+            {
+                "label": "Button Background Color",
+                "name": "button_background_color",
+                "type": "color",
+                "default": "#27234F"
+            },
+            {
+                "label": "Padding",
+                "name": "padding",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Top",
+                        "name": "padding_top",
+                        "type": "number",
+                        "default": 40,
+                        "unit": "px"
+                    },
+                    {
+                        "label": "Right",
+                        "name": "padding_right",
+                        "type": "number",
+                        "default": 40,
+                        "unit": "px"
+                    },
+                    {
+                        "label": "Bottom",
+                        "name": "padding_bottom",
+                        "type": "number",
+                        "default": 40,
+                        "unit": "px"
+                    },
+                    {
+                        "label": "Left",
+                        "name": "padding_left",
+                        "type": "number",
+                        "default": 40,
+                        "unit": "px"
+                    }
+                ]
+            }
+
+        ]
+    }
+]

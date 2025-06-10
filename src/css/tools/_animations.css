@@ -1,0 +1,70 @@
+/* Classes de base pour les éléments à animer */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fade */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glissement depuis le haut */
+.slide-from-top {
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-from-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glissement depuis le bas */
+.slide-from-bottom {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-from-bottom.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glissement depuis la gauche */
+.slide-from-left {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-from-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Glissement depuis la droite */
+.slide-from-right {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}

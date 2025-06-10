@@ -1,0 +1,98 @@
+[
+    {
+        "label": "Description",
+        "name": "description",
+        "type": "text",
+        "default": "Descritption goes here"
+    },
+    {
+        "label": "Image",
+        "name": "image",
+        "type": "image"
+    },
+    {
+        "label": "Google Review",
+        "name": "google_review",
+        "type": "text",
+        "default": "See the reviews"
+    },
+    {
+        "label": "Google Review URL",
+        "name": "google_review_url",
+        "type": "url",
+        "required": false,
+        "description": "URL to open when clicking the text"
+    },
+    {
+        "label": "Button Text",
+        "name": "button_text",
+        "type": "text",
+        "required": false,
+        "default": "Button text goes here"
+    },
+    {
+        "label": "Button Link",
+        "name": "button_link",
+        "type": "url",
+        "required": false,
+        "description": "URL to open when clicking the button"
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Description Font",
+                        "name": "description_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 14,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "400"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Review Font",
+                        "name": "review_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 12,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "600",
+                                "text-decoration": "underline"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Button font",
+                        "name": "button_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 15,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "600"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

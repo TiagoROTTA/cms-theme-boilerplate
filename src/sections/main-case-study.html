@@ -1,0 +1,64 @@
+<!--
+  templateType: section
+  label: Main Case Study Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/custom_section.png
+  description: "Chemin du processus de création"
+-->
+  {% dnd_section class="main-case-study-section" %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        html={{ context.heading or '<h2>Découvrez comment nous avons accompagné vos <span>confrères</span> et <span>consoeurs</span></h2>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+    path="../modules/main-case-study",
+    case_study_cards="{{ context.main_case_study_cards or '[
+    {
+        \"card_title\": \"Comment le cabinet Kardynal génère plus de 40 leads générés par mois ?\", 
+        \"card_description\": 
+            [
+                {\"description_text\": \"Site internet\"}, 
+                {\"description_text\": \"Référencement naturel\"}, 
+                {\"description_text\": \"Création de contenus\"}, 
+                {\"description_text\": \"Livres blancs\"}, 
+                {\"description_text\": \"Webinaire\"}
+            ], 
+        \"button_text\": \"Voir l\\'étude de cas\", 
+        \"button_link\": \"#\"
+    },
+    {
+        \"card_title\": \"Comment le cabinet Kardynal génère plus de 40 leads générés par mois ?\", 
+        \"card_description\": 
+            [
+                {\"description_text\": \"Process de vente\"}, 
+                {\"description_text\": \"Centralisation des données prospects \"}, 
+                {\"description_text\": \"Optimisation par l’IA \"}, 
+                {\"description_text\": \"Automatisation des devis et lettres de missions\"}
+            ], 
+        \"button_text\": \"Voir l\\'étude de cas\", 
+        \"button_link\": \"#\"
+    },
+    {
+        \"card_title\": \"Comment le cabinet Kardynal génère plus de 40 leads générés par mois ?\", 
+        \"card_description\": 
+            [
+                {\"description_text\": \"Mise en place d’un CRM\"}, 
+                {\"description_text\": \"Centralisation de la data\"}, 
+                {\"description_text\": \"Qualification de la data\"}, 
+                {\"description_text\": \"Automatisation on-boarding client\"}, 
+                {\"description_text\": \"Suivi de la production\"}
+            ], 
+        \"button_text\": \"Voir l\\'étude de cas\", 
+        \"button_link\": \"#\"
+    }
+    ]' }}"
+%}
+{% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

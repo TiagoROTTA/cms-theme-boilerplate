@@ -1,0 +1,248 @@
+
+.client-review-container {
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF; /* Text color */
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left; /* Align all content to the left */
+}
+
+.client-review-container > div {
+    display: flex;
+    align-items: center; /* Vertically align the text with the image */
+    gap: 30px; /* Adjust spacing between the logo and the review */
+}
+
+.client-logo {
+    flex: 0 0 50%; /* Reduce the width of the logo section */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.client-logo img {
+    width: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any inline spacing caused by the image */
+    border-radius: 10px;
+}
+
+.review {
+    flex: 1 1 auto; /* Allow the review section to grow dynamically */
+    word-wrap: break-word; /* Ensure long words break properly */
+    overflow-wrap: break-word; /* Ensure text wraps within the box */
+    white-space: normal; /* Allow text to wrap to the next line */
+    line-height: 1.6; /* Improve readability with proper line spacing */
+    max-width: 100%; /* Ensure the text does not overflow the container */
+}
+
+.case-study {
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF; /* Text color */
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left; /* Align all content to the left */
+    height: 100%;
+}
+
+.case-study .titles h3 {
+    margin-bottom: 0.8rem;
+}
+
+.case-study .titles h4 {
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.case-study p {
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.case-study .columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centre les box horizontalement */
+    align-items: center;      /* Centre les box verticalement si plusieurs lignes */
+    margin-top: 2rem;
+    margin-left: -10px;
+}
+
+.case-study .column {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center; /* Center content inside the boxes */
+    flex: 1 1 calc(50% - 20px); /* Ensure boxes are side by side */
+    max-width: calc(50% - 20px); /* Limit the width of each box */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.case-study .column p:first-child {
+    margin-bottom: 0.2rem;
+}
+
+.case-study .column p:last-child {
+    margin: 0;
+}
+
+.case-study .post_mortem {
+    margin-top: 1.5rem;
+}
+
+.case-study-flex {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+    gap: 18px; /* Ajoute un espace entre le bloc de gauche et ceux de droite */
+}
+
+.case-study-container {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.client-review-container {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px; /* petit espace entre les deux reviews */
+    height: auto; /* ou 100% si le parent a une hauteur */
+}
+
+.review-rect {
+    flex: 1 1 0;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    /* padding: ...;  garde ton padding horizontal, mais évite trop de padding vertical */
+}
+
+.case-study-rect {
+    width: 602px;
+    height: 567px;
+    border-radius: 10px;
+    background: #2c326e;
+    flex-shrink: 0;
+}
+
+.review-rects {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.review-rect {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: visible; /* Ensure content is not clipped */
+    padding-right: 32px;
+    padding-left: 0;
+    height: auto; /* Remove fixed height to allow content to grow */
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2c326e 0%, #e65598 100%);
+    flex-shrink: 0;
+}
+
+.review-logo {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 24px;
+    margin-left: 0;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    flex-shrink: 0;
+    max-width: 175px;
+    max-height: 117px;
+}
+
+.review-logo img {
+    display: block;
+    max-width: 145px;
+    max-height: 69px;
+    border-radius: 5px;
+}
+
+.review-content {
+    flex: 1 1 0;
+    min-width: 0;
+    color: #fff;
+    text-align: left;
+}
+
+.review-rect-top {}
+.review-rect-bottom {}
+
+@media (max-width: 800px) {
+    .case-study{
+        padding: 40px 16px !important; 
+    }
+
+    .case-study-flex {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 24px; /* Maintain spacing between stacked elements */
+    }
+
+    .case-study-container,
+    .client-review-container {
+        width: 100%; /* Ensure full width for each section */
+        min-width: 0; /* Reset any minimum width constraints */
+    }
+
+    .case-study .columns {
+        flex-direction: column; /* Stack boxes vertically */
+        gap: 20px; /* Maintain spacing between stacked boxes */
+        margin-left: 0;
+    }
+
+    .case-study .column {
+        max-width: 100%; /* Allow each box to take full width */
+        flex: 1 1 100%; /* Ensure full width for each box */
+    }
+
+    .client-review-container > div {
+        flex-direction: column; /* Stack items vertically inside reviews */
+        gap: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .client-logo, .review {
+        flex: 0 0 auto; /* Reset flex basis */
+        width: 100%; /* Make both sections take full width */
+        text-align: center; /* Center-align text for better appearance */
+    }
+
+    .review-rect {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 20px 16px !important;
+        text-align: center;
+        min-height: unset !important;
+        height: auto !important;
+    }
+
+    .review-logo {
+        margin: 0 0 16px 0 !important;
+        max-width: 100px;
+        max-height: 70px;
+        padding: 8px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-content {
+        text-align: center !important;
+        width: 100%;
+        display: block;
+    }
+}

@@ -1,0 +1,112 @@
+{# Module styles #}
+
+{% require_css %}
+  <style>
+
+        {# Team module wrapper #}
+
+        .team-module {
+            padding: {{ module.styles.section_settings.padding.padding_top }}px 
+                     {{ module.styles.section_settings.padding.padding_right }}px 
+                     {{ module.styles.section_settings.padding.padding_bottom }}px 
+                     {{ module.styles.section_settings.padding.padding_left }}px;
+            margin: {{ module.styles.section_settings.margin.margin_top }}px 
+                    {{ module.styles.section_settings.margin.margin_right }}px 
+                    {{ module.styles.section_settings.margin.margin_bottom }}px 
+                    {{ module.styles.section_settings.margin.margin_left }}px;
+            
+        }
+
+        .team-module h2 {
+            text-align: {{ module.styles.title.alignment.horizontal_align }};
+            {{module.styles.title.font_family.css}}
+            
+        }
+
+        {# Team card columns #}
+
+        .team-card .columns {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: {{ module.styles.team_card_settings.column_gap }}px;
+            {% if module.styles.team_card_settings.alignment.horizontal_align == "LEFT" %}
+              justify-content: flex-start;
+            {% elif module.styles.team_card_settings.alignment.horizontal_align == "CENTER" %}
+              justify-content: center;
+            {% elif module.styles.team_card_settings.alignment.horizontal_align == "RIGHT" %}
+              justify-content: flex-end;
+            {% endif %}
+        }
+
+        .team-card .column {
+            padding: {{ module.styles.team_card_settings.padding.padding_top }}px 
+                     {{ module.styles.team_card_settings.padding.padding_right }}px 
+                     {{ module.styles.team_card_settings.padding.padding_bottom }}px 
+                     {{ module.styles.team_card_settings.padding.padding_left }}px;
+        }
+
+        {# Image styles #}
+
+        .team-card .column img {
+            width : {{module.styles.team_card_settings.image_settings.image_size}}px;
+            height : {{module.styles.team_card_settings.image_settings.image_size}}px;
+            border-radius: {{ module.styles.team_card_settings.image_settings.image_border_radius }}%;
+        }
+
+        {# Job title styles #}
+
+        .team-card .column h3 {
+            {{ module.styles.team_card_settings.job_title.font_family.css }}
+            text-align: {{ module.styles.team_card_settings.job_title.alignment.horizontal_align }} !important;
+        }
+
+        {# Job description styles #}
+
+        .team-card .column .description {
+            {{ module.styles.team_card_settings.job_description.font_family.css }}
+            text-align: {{ module.styles.team_card_settings.job_description.alignment.horizontal_align }};
+        }
+
+  </style>
+{% end_require_css %}
+
+<section class="team-module fade-in">
+        <h2 class="">{{ module.title }}</h2>
+        <div class="team-card">
+            <div class="columns">
+              {% for item in module.team_card %}
+                  <div class="column">
+                    {% if item.image.src %}
+                      <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" >
+                    {% else %}
+                      <img src="{{ get_asset_url('../../images/grayscale-mountain.png') }}" alt="Default Image">
+                    {% endif %}
+            
+                    {% if item.name %}
+                      <h2>{{ item.name }}</h2>
+                    {% endif %}
+            
+                    {% if item.social_links %}
+                        <div class="social-links">
+                            {% for link in item.social_links %}
+                                <a href="{{ link.url|escape_html }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="{{ link.icon.src }}" alt="{{ link.icon.alt }}">
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+            
+                    {% if item.job_title %}
+                        <h3>{{ item.job_title }}</h3>
+                    {% endif %}
+            
+                    {% if item.job_description %}
+                      <div class="description">
+                        <p>{{ item.job_description }}</p>
+                      </div>
+                    {% endif %}
+                  </div>
+              {% endfor %}
+            </div>
+        </div>
+</section>

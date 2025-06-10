@@ -1,0 +1,296 @@
+[
+    {
+        "label": "Left column",
+        "name": "left_column",
+        "type": "group",
+        "children":[
+            {
+                "label": "Image",
+                "name": "image",
+                "type": "image"
+            },
+            {
+                "label": "Description",
+                "name": "description",
+                "type": "text",
+                "default": "Description goes here"
+            },
+            {
+                "label": "Bold informations",
+                "name": "bold_informations",
+                "type": "text",
+                "default": "Bold information goes here"
+            },
+            {
+                "label": "Social Media",
+                "name": "social_media",
+                "type": "group",
+                "occurrence": {
+                    "min": 1,
+                    "default": 3
+                },
+                "children": [
+                    {
+                        "label": "Social Media Icon",
+                        "name": "social_media_icon",
+                        "type": "image"
+                    },
+                    {
+                        "label": "Social Media Link",
+                        "name": "social_media_link",
+                        "type": "text",
+                        "default": "#"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Center column",
+        "name": "center_column",
+        "type": "group",
+        "children":[
+            {
+                "label": "Sections",
+                "name": "sections",
+                "type": "group",
+                "occurrence": {
+                    "min": 1,
+                    "default": 3
+                },
+                "children": [
+                    {
+                        "label": "Section Title",
+                        "name": "section_title",
+                        "type": "text",
+                        "default": "Section Title goes here"
+                    },
+                    {
+                        "label": "Links",
+                        "name": "links",
+                        "type": "group",
+                        "occurrence": {
+                            "min": 1,
+                            "default": 3
+                        },
+                        "children": [
+                            {
+                                "label": "Link Text",
+                                "name": "link_text",
+                                "type": "text",
+                                "default": "Link Text goes here"
+                            },
+                            {
+                                "label": "Link URL",
+                                "name": "link_url",
+                                "type": "text",
+                                "default": "#"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Right Column",
+        "name": "right_column",
+        "type": "group",
+        "children":[
+            {
+                "label": "Title",
+                "name": "title",
+                "type": "text",
+                "default": "Title goes here"
+            },
+            {
+                "label": "Address",
+                "name": "address",
+                "type": "text",
+                "default": "Address goes here"
+            },
+            {
+                "label": "Phone Icon",
+                "name": "phone_icon",
+                "type": "image"
+            },
+            {
+                "label": "Phone Number",
+                "name": "phone_number",
+                "type": "text",
+                "default": "Phone goes here"
+            },
+            {
+                "label": "CTA",
+                "name": "cta",
+                "type": "group",
+                "occurrence": {
+                    "min": 1,
+                    "default": 2
+                },
+                "children": [
+                    {
+                        "label": "CTA Text",
+                        "name": "cta_text",
+                        "type": "text",
+                        "default": "Call to Action goes here"
+                    },
+                    {
+                        "label": "CTA Link",
+                        "name": "cta_link",
+                        "type": "text",
+                        "default": "#"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Left Column",
+                        "name": "left_column",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Description",
+                                "name": "description_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 15,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "300"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Bold Information",
+                                "name": "bold_informations_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 15,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "700"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Center Column",
+                        "name": "center_column",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Section Title",
+                                "name": "section_title_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#3A4C88",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "800"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Link Text",
+                                "name": "link_text_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "300"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Right Column",
+                        "name": "right_column",
+                        "type": "group",
+                        "children": [
+                            {
+                                "label": "Title",
+                                "name": "title_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#3A4C88",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "800"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Address",
+                                "name": "address_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "300"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Phone Number",
+                                "name": "phone_number_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "600"
+                                    }
+                                }
+                            },
+                            {
+                                "label": "CTA Text",
+                                "name": "cta_text_font",
+                                "type": "font",
+                                "default": {
+                                    "color": "#FFFFFF",
+                                    "font": "Roboto",
+                                    "size": 14,
+                                    "size_unit": "px",
+                                    "styles": {
+                                        "font-weight": "700"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,43 @@
+.value-proposition-section{
+    padding-bottom: 200px;
+}
+
+.team-section{
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+h2{
+    padding-bottom: 15px;
+}
+
+
+
+h2{
+    text-align: center;
+}
+
+
+body {
+    background-color: #FDFDFD;
+}
+
+.qanda-section {
+    
+    background: linear-gradient(225deg, #E75598 0%, #36327B 75%);
+}
+
+.qanda-section h2 {
+    color: white;
+    text-align: left;
+}
+
+
+
+.hero-section{
+    padding: 90px 2rem 130px 2rem !important;
+}
+
+

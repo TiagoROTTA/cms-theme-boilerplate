@@ -1,0 +1,17 @@
+{
+    "label": "Value Proposition",
+    "css_assets": [],
+    "external_js": [],
+    "global": false,
+    "host_template_types": ["PAGE"],
+    "icon": "../../images/module-icons/team.svg",
+    "js_assets": [],
+    "other_assets": [],
+    "smart_type": "NOT_SMART",
+    "tags": ["value_proposition"],
+    "is_available_for_new_content": true,
+    "categories": [      
+      "Commerce"
+    ]
+  }
+  

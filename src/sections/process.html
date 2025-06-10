@@ -1,0 +1,38 @@
+<!--
+  templateType: section
+  label: Process Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/custom_section.png
+  description: "Chemin du processus de création"
+-->
+  {% dnd_section class="process-section" %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        html={{ context.heading or '<h2>Comment se déroule la <span>création de votre site web</span> avec Hexagone Stratégie ?  </h2>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/process",
+        process_cards={{ context.process_cards or '[{
+          "card_title": "Rendez-vous de lancement",
+         "bold_informations": "(Réunion ~2 à 3h en visioconférence ou en présentiel)", 
+         "card_description": "Un premier rendez-vous au cours du quel nous déterminons le périmètre du projet et nous vous aidons à définir votre cahier des charges. Nous discutons également des informations importantes à faire apparaître sur votre site afin de commencer à déterminer ensemble sa structure" }, 
+         {
+          "card_title": "Planification du projet", 
+          "bold_informations": "3 à 5 jours", 
+          "card_description": "Sur la base des éléments que vous nous avez transmis, nous vous faisons parvenir un planning afin de pouvoir identifier les différents jalons importants du projet, prévoir les dates des différents rendus et des prochains points ainsi que la date de finalisation du projet."
+        }, 
+        {
+          "card_title": "Définition de la structure du site et des page à créer ", 
+          "bold_informations": "2 semaines", 
+          "card_description": "Le site web de votre cabinet sera composé de plusieurs pages en fonctions de vos objectifs. Nous déterminons avec vous toutes les pages à créer ainsi que la structure finale de votre site web. Sur la base de notre expérience dans la création de site web pour des cabinet d’expertise comptable, nous sommes force de proposition pour vous conseiller la meilleure approche.", 
+          "button_text": "Voir nos réalisations de site web"}]' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

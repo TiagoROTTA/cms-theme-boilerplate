@@ -1,0 +1,27 @@
+<!--
+  templateType: section
+  label: QandA Section
+  isAvailableForNewContent: true
+  description: "Section FAQ avec deux colonnes, QandA à gauche et Vidéo à droite"
+-->
+{% dnd_section class="qanda-section" %}
+  {% dnd_column width=8, offset=0 %}
+    {% dnd_row %}
+      {% dnd_module path="@hubspot/rich_text",
+        html="<h2>On répond à vos <span>questions</span> !</h2>"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module path="../modules/qanda", question_cards="[
+        {\"question\": \"Combien coûte la création d'un site web ?\", \"answer\": \"Un site web sur-mesure pour votre cabinet à partir de 6 000 euros HT.\n \nLe tarif moyen pour la création d'un site web dédié aux cabinets d'expertise comptable est de 6 000 euros HT, pouvant varier selon la complexité de votre projet.\n \nCe prix comprend :\nUn site 100% personnalisé – Pas de template réutilisé, nous concevons votre site de A à Z pour qu'il reflète parfaitement votre cabinet.\nUne optimisation SEO et conversion – Votre site est conçu pour être bien référencé sur Google et maximiser les prises de contact.\nUn accompagnement stratégique – Nous vous aidons à structurer vos offres et à mettre en avant les informations clés pour attirer et rassurer vos prospects.\nUne expérience utilisateur fluide – Nous optimisons le parcours de navigation pour offrir à vos visiteurs une expérience intuitive et engageante.\"},
+        {\"question\": \"Combien de temps pour la réalisation de mon site web ?\", \"answer\": \"Un site livré en moyenne sous 3 à 4 mois.\nNous estimons un délai moyen de 3 à 4 mois pour la création et la mise en ligne de votre site internet. Dès le lancement du projet, nous vous fournissons un planning détaillé avec les étapes clés, les temps de réalisation et les dates des jalons importants.\n\nLe timing peut varier en fonction de la complexité de votre projet et de votre disponibilité. Certaines étapes nécessitent votre validation avant d'avancer, nous ajustons donc le calendrier en conséquence.\nEn moyenne, un site vitrine pour un cabinet d'expertise comptable est livré en 3 mois.\"},
+        {\"question\": \"Comment mettre mon site à jour par la suite ?\", \"answer\": \"Un site web est en effet voué à évoluer. Pour cela, nous avons plusieurs solutions à vous proposer.\n\nPrise en charge de l'hébergement : Nous nous chargeons de gérer votre hébergement. Cette prestation s'élève à XX euros HT à l'année. Prestation de maintenance à 99 euros HT / mois. Nous pouvons vous fournir une prestation de maintenance. Si vous souhaitez opter pour cet accompagnement, nous réalisons des sauvegardes régulières et nous intervenons en cas de soucis techniques. Nous sommes également disponible pour réaliser des petites modifications sur votre site : mise à jour de contenu, mise en ligne d'article de blog.\nVous laisser la main : \nSi vous ne souhaitez pas bénéficier de la prestation de maintenance, nous vous créons à la livraison du site un accès super administrateur sur votre site. Vous serez donc libre d'effectuer les modifications que vous souhaitez.\"},
+        {\"question\": \"Puis-je créer un accès pour mes clients sur mon site ?\", \"answer\": \"Intégrez un espace client personnalisé sur votre site.\nNous pouvons créer un espace client sécurisé directement sur votre site, permettant à vos clients d'accéder facilement à leurs différentes plateformes : GED, dépôt de pièces comptables, et autres outils de gestion.\nIl vous suffit de nous indiquer cette fonctionnalité lors de la conception du cahier des charges afin que nous l'intégrions de manière fluide et intuitive dans votre site.\n\nEn complément, nous intégrons un service client en ligne, leur permettant de soumettre des demandes ou de poser des questions via cet espace dédié. Ce canal centralisé facilite les échanges et renforce la réactivité de votre support.\"}
+      ]" %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column width=4, offset=8 %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

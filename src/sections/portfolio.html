@@ -1,0 +1,24 @@
+<!--
+  templateType: section
+  label: Portfolio Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/custom_section.png
+  description: "Portfolio de deux réalisations"
+-->
+{% dnd_section class="portfolio-section" %}
+    {% dnd_column %}
+        {% dnd_row %}
+            {% dnd_module
+                path="@hubspot/rich_text",
+                html={{ context.heading or '<h2>Voir ce que nous avons réaliser pour vos <span>confrères et consoeurs</span>. </h2>' }}
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+            {% dnd_module
+                path="../modules/portfolio"
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+{% end_dnd_section %}

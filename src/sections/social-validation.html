@@ -1,0 +1,38 @@
+<!--
+  templateType: section
+  label: Social Validation Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/custom_section.png
+  description: "Avis client plus études de cas"
+-->
+
+{% dnd_section class="social-validation-section" %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        html={{ context.heading or '<h2>Les <span>experts-comptables</span> qui nous ont fait confiance ! </h2>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/case-study",
+        title={{ context.title or "Etude de cas" }},
+        secondary_title={{ context.secondary_title or "Création du site web du cabinet Tandem Stratégie." }},
+        description={{ context.description or "Tandem Stratégie est un cabinet d’expertise comptable spécialisé dans l’accompagnement des sites e-commerce.<br>Problématique : Le cabinet doit attirer de nouveaux clients pour se développer." }},
+        solution={{ context.solution or "<strong>Solution apportée :</strong> <br>Création d’un site sur-mesure avec la mise en avant d’une offre dédiée aux e-commerçants, accompagné d’une campagne Ads." }},
+        result={{ context.result or "<strong>Resultats</strong>" }},
+        results={{ context.results or '[{"result_title": "<strong>+ 260</strong> leads générés en 1an et demi*", "result_description": "depuis le site internet"}, {"result_title": "<strong>+ 50</strong> de lettre de mission signées*", "result_description": "grâce aux leads générés via le site internet"}]' }},
+        footer_note={{ context.footer_note or "*La création du site a été appuyée par une campagne Google Ads." }},
+        first_client_review={{ context.first_client_review or "L’équipe a parfaitement compris mes besoins et a créé un site à mon image. Moderne, clair et efficace, il m’aide à attirer de nouveaux clients et à rassurer mes prospects. Un vrai plus pour mon cabinet !" }},
+        first_client_name={{ context.first_client_name or "— Cabinet Tandem Stratégie" }},
+        second_client_review={{ context.second_client_review or "Grâce à notre nouveau site carrière, nous recevons des candidatures plus qualifiées et attirons des talents qui partagent nos valeurs. L’expérience candidat a été totalement repensée, et cela fait toute la différence. Un vrai levier pour notre marque employeur !" }},
+        second_client_name={{ context.second_client_name or "— Cabinet Tandem Stratégie" }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+

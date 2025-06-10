@@ -1,0 +1,149 @@
+{% require_css %}
+<style>
+
+
+    {#Eléments du case study#}
+    .titles h3{
+        {{module.styles.case_study.typography.main_title.font.css}}
+    }
+
+    .titles h4{
+        {{module.styles.case_study.typography.secondary_title.font.css}}
+    }
+
+    .description p{
+        {{module.styles.case_study.typography.text.font.css}}
+    }
+
+    .case-study-module strong{
+        {{module.styles.case_study.typography.text.bold.css}}
+    }
+    
+    .post_mortem{
+        {{module.styles.case_study.typography.text.post_mortem.css}}
+    }
+
+    .box_title{
+        {{module.styles.case_study.typography.box_text.main_font.css}}
+    }
+
+    .box_title strong{
+        {{module.styles.case_study.typography.box_text.bold_font.css}}
+    }
+
+    .box_description{
+        {{module.styles.case_study.typography.box_text.description_font.css}}
+    }
+
+
+    .case-study{
+        background-image: url('{{ module.styles.case_study.background_image.src or get_asset_url('../../images/case-study-background.png') }}');
+        background-size: cover;
+        background-position: center;
+        padding: {{ module.styles.case_study.padding.padding_top }}px 
+                     {{ module.styles.case_study.padding.padding_right }}px 
+                     {{ module.styles.case_study.padding.padding_bottom }}px 
+                     {{ module.styles.case_study.padding.padding_left }}px;
+    }
+
+
+    {#Eléments du first client review#}
+
+    .first-client-review .client-review{
+        {{module.styles.first_client_review.typography.review.css}}
+    }
+    .first-client-review .client-name{
+        {{module.styles.first_client_review.typography.client_name.css}}
+    }
+
+    .first-client-review{
+        background-image: url('{{ module.styles.first_background_image.src or get_asset_url('../../images/review-background.png') }}');
+        background-size: cover;
+        background-position: center;
+        padding: {{ module.styles.first_client_review.padding.padding_top }}px 
+                {{ module.styles.first_client_review.padding.padding_right }}px 
+                {{ module.styles.first_client_review.padding.padding_bottom }}px 
+                {{ module.styles.first_client_review.padding.padding_left }}px;
+    }
+
+
+
+    {#Eléments du second client review#}
+
+    .second-client-review .client-review{
+        {{module.styles.second_client_review.typography.review.css}}
+    }
+    .second-client-review .client-name{
+        {{module.styles.second_client_review.typography.client_name.css}}
+    }
+
+    .second-client-review{
+        background-image: url('{{ module.styles.second_client_review.background_image.src or get_asset_url('../../images/review-background.png') }}');
+        background-size: cover;
+        background-position: center;
+        padding: {{ module.styles.second_client_review.padding.padding_top }}px 
+                {{ module.styles.second_client_review.padding.padding_right }}px 
+                {{ module.styles.second_client_review.padding.padding_bottom }}px 
+                {{ module.styles.second_client_review.padding.padding_left }}px;
+    }
+
+
+
+</style>
+{% end_require_css %}
+<section class="case-study-module">
+    <div class="case-study-flex">
+        <div class="case-study-container slide-from-left">
+            <div class="case-study">
+                <div class="titles">
+                    <h3>{{module.title | upper}}</h3>
+                    <h4>{{module.secondary_title}}</h4>
+                </div>
+                <div class="description">
+                    <p>{{module.description}}</p>
+                    <p>{{module.solution}}</p>
+                </div>
+                <div class="result">
+                    <p>{{module.result}}</p>
+                    <div class="columns">
+                        {% for item in module.results %}
+                            <div class="column">
+                                <p class="box_title">{{item.result_title}}</p>
+                                <p class="box_description">{{item.result_description}}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <p class="post_mortem">{{module.footer_note}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="client-review-container">
+            <div class="first-client-review review-rect slide-from-right"> 
+                <div class="client-logo">
+                    {% if module.first_client_logo.src %}
+                        <img src="{{ module.first_client_logo.src }}" alt="{{ module.first_client_logo.alt }}" />
+                    {% else %}
+                        <img src="{{ get_asset_url('../../images/default-client-logo.png') }}" alt="Default Client Logo" />
+                    {% endif %}
+                </div>
+                <div class="review">
+                    <p class="client-review">{{ module.first_client_review }}</p>
+                    <p class="client-name">{{ module.first_client_name }}</p>
+                </div>
+            </div>
+            <div class="second-client-review review-rect slide-from-right"> 
+                <div class="client-logo">
+                    {% if module.second_client_logo.src %}
+                        <img src="{{ module.second_client_logo.src }}" alt="{{ module.second_client_logo.alt }}" />
+                    {% else %}
+                        <img src="{{ get_asset_url('../../images/default-client-logo.png') }}" alt="Default Client Logo" />
+                    {% endif %}
+                </div>
+                <div class="review">
+                    <p class="client-review">{{ module.second_client_review }}</p>
+                    <p class="client-name">{{ module.second_client_name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+{%require_css%}
+<style>
+    .agency-introduction-module h2{
+        {{module.styles.typography.title.css}}
+        margin-bottom: 0;
+        line-height: 1.1;
+    }
+
+    .agency-introduction-module span{
+        {{module.styles.typography.title_span.css}}
+    }
+
+    .agency-introduction-module p{
+        {{module.styles.typography.description.css}}
+        margin-top:0;
+    }
+
+    .agency-introduction-module .info-box h3{
+        margin-bottom: 0;
+        {{ module.styles.typography.info_cards_numbers.css }}
+    }
+
+    .agency-introduction-module .info-box p{
+        margin-top:0;
+        {{ module.styles.typography.info_cards_description.css  }}
+        
+    }
+</style>
+{% end_require_css %}
+
+<section class="agency-introduction-module">
+    <div class="container fade-in">
+        <div class="content">
+            <h2>{{module.agency_introduction.title}}</h2>
+            <p>{{module.agency_introduction.description}}</p>
+            <div class="info-container">
+                {% for item in module.agency_introduction.info_cards %}
+                    <div class="info-box">
+                        <h3>{{item.number}}</h3>
+                        <p>{{item.description}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="image-container">
+            {% if module.image.src %}
+                <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" />
+            {% else %}
+                <img src="{{ get_asset_url('../../images/team-picture.png') }}" alt="Agency Introduction Image" />
+            {% endif %}
+        </div>
+    </div>
+</section>

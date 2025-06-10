@@ -1,0 +1,57 @@
+{% require_css %}
+<style>
+.value-card{
+    background-color: {{module.styles.cards_background_color}};
+    padding: {{ module.styles.padding.padding_top }}px 
+                     {{ module.styles.padding.padding_right }}px 
+                     {{ module.styles.padding.padding_bottom }}px 
+                     {{ module.styles.padding.padding_left }}px;
+}
+
+.value-card h3{
+    {{module.styles.typography.title_font.css}}
+}
+
+.value-card p{
+    {{module.styles.typography.description_font.css}}
+}
+.value-card .value-button{
+    {{module.styles.typography.button_font.css}}
+    background-color: {{module.styles.button_background_color}};
+}
+
+.value-card .value-button:hover{
+    {{module.styles.typography.button_font.css}}
+    text-decoration: none !important;
+}
+
+</style>
+{% end_require_css %}
+
+<section class="value-proposition-module">
+    <div class="value-container">
+        {% for item in module.value_card %}
+            {% set loop_index = loop.index0 %}
+            {% set position = loop_index % 3 %}
+            {% if position == 0 %}
+                {% set animation_class = "slide-from-left" %}
+            {% elif position == 1 %}
+                {% set animation_class = "fade-in" %}
+            {% else %}
+                {% set animation_class = "slide-from-right" %}
+            {% endif %}
+            <div class="value-card {{ animation_class }}">
+                {% if item.image.src %}
+                    <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" class="value-image">
+                {% else %}
+                    <img src="{{ get_asset_url('../../images/default-value-proposition-icon.png') }}" alt="Default Image" class="value-image">
+                {% endif %}
+                <h3>{{ item.value_title }}</h3>
+                <p>{{ item.value_description }}</p>
+                {% if item.button_text and item.button_link %}
+                    <a href="{{ item.button_link|escape_html }}" class="value-button">{{ item.button_text|escape_html }}</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>

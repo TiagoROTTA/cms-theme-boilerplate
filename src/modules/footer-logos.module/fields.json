@@ -1,0 +1,18 @@
+[
+    {
+        "label": "Logos",
+        "name": "logos",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "default": 5
+        },
+        "children": [
+            {
+                "label": "Image",
+                "name": "image",
+                "type": "image"
+            }    
+        ]
+    }
+]

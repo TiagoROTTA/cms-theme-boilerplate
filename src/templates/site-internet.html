@@ -1,0 +1,49 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Site Internet
+-->
+{% require_css %}
+<style>
+.team-section{
+  background-image: url('{{ get_asset_url("../images/fond-team.png") }}') !important;
+}
+.value-proposition-section {
+  background-image: url('{{ get_asset_url("../images/value-proposition-section.png") }}');
+}
+
+.hero-section {
+  background-image: url('{{ get_asset_url("../images/hero-background.png") }}');
+  background-size: cover;
+  background-position: center;
+}
+
+</style>
+{% end_require_css %}
+
+
+
+
+
+
+{% extends "./layouts/base.html" %}
+{% set template_css = "../../css/templates/site-web.css" %}
+{% block body %}
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--web-site"
+%}
+
+  {# team card #}
+  {% include_dnd_partial path="../sections/hero.html" %}
+  {% include_dnd_partial path="../sections/value-proposition.html" %}
+  {% include_dnd_partial path="../sections/process.html" %}
+  {% include_dnd_partial path="../sections/team.html" %}
+  {% include_dnd_partial path="../sections/social-validation.html" %}
+  {% include_dnd_partial path="../sections/portfolio.html" %}
+  {% include_dnd_partial path="../sections/QandA.html" %}
+  
+  
+
+{% end_dnd_area %}
+{% endblock body %}

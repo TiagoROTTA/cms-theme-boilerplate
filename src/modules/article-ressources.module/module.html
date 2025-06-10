@@ -1,0 +1,29 @@
+{%require_css%}
+<style>
+.article-ressources-module h2 {
+    {{ module.styles.typography.title.css }}
+}
+
+.article-ressources-module p {
+    {{ module.styles.typography.description.css }}
+}
+
+.article-ressources-module .ressource-btn {
+    {{ module.styles.typography.button_text.css }}
+}
+</style>
+{%end_require_css%}
+
+<section class="article-ressources-module">
+    <div class= "article-ressources fade-in">
+        <div class="text">
+            <h2>{{ module.title }}</h2>
+            <p>{{ module.description }}</p>
+        </div>
+        <div class="ressource-buttons">
+            {% for button in module.buttons %}
+                <a href="{{ button.button_link|escape_html }}" class="ressource-btn">{{ button.button_text|escape_html }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

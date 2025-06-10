@@ -1,0 +1,15 @@
+<section class="footer-logos-module">
+  <div class="footer-logos-bar"></div>
+  <div class="footer-logos-flex">
+    {% for logo in module.logos %}
+      <div class="footer-logo-item">
+        {% if logo.image.src %}
+          <img src="{{ logo.image.src }}" alt="{{ logo.image.alt }}" class="footer-logo-img">
+        {% else %}
+          <img src="{{ get_asset_url('default-logo.png') }}" alt="Logo par défaut" class="footer-logo-img">
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="footer-logos-bar bottom"></div>
+</section>

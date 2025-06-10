@@ -1,0 +1,12 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: top 0.3s;
+}
+
+.nav-hidden {
+    top: -100px; /* Ajustez en fonction de la hauteur de votre navbar */
+}

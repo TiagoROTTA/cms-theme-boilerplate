@@ -1,0 +1,89 @@
+.agency-introduction-module{
+    background-color: #FDFDFD;
+}
+
+
+.agency-introduction-module .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.agency-introduction-module .content {
+    flex: 1 1 0;
+    min-width: 0;
+}
+.agency-introduction-module .info-container {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    align-items: stretch;
+}
+.agency-introduction-module .info-box {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(130, 50, 123, 0.2);
+    padding: 10px 32px;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligne le contenu en haut */
+    align-items: stretch; /* Permet au contenu de s'aligner en haut */
+    text-align: center;
+}
+.agency-introduction-module .image-container {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.agency-introduction-module .image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: #FDFDFD;
+}
+
+
+@media (max-width: 1050px)  {
+    .agency-introduction-module .info-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        width: 100%; /* Ajouté pour occuper toute la largeur */
+    }
+    .agency-introduction-module .info-box {
+        flex: 0 0 28%;
+        max-width: 48%;
+        width: 48%; /* Ajouté pour forcer deux par ligne */
+        margin: 0;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .agency-introduction-module .container {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .agency-introduction-module .image,
+    .agency-introduction-module .content {
+        width: 100%;
+    }
+    .agency-introduction-module .info-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .agency-introduction-module .info-box {
+        flex: 0 1 32%;
+        max-width: 32%;
+        width: 32%;
+        box-sizing: border-box;
+    }
+}

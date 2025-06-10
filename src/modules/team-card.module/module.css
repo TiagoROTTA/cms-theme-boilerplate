@@ -1,0 +1,79 @@
+.team-module {
+  /* Dimensions and positioning */
+  min-height : 100%;
+  border-radius: 10px; /* rounded corners */
+  
+  /* Background properties */
+  background-color: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* blurring the background behind the element */
+  
+  /* Drop shadow */
+  box-shadow: 0 4px 10px rgba(39, 35, 79, 0.5); /* Adjusted RGB values closer to standard format */
+
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale !important;
+  margin: 0!important;
+}
+
+
+.team-module h2 {
+  margin-bottom: 3rem;
+}
+  
+.team-module h2 span{
+  font-weight : bold;
+}
+
+.team-module .columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+  
+.team-module .column {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.team-module .column img {
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    line-height: 0;
+    display: block;         /* Ensures the image behaves as a block element */
+    margin-left: auto;      /* Centers the image horizontally */
+    margin-right: auto;     /* Centers the image horizontally */
+}
+  
+  .team-module .column h3 {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  
+  .team-module .description {
+    line-height: 1.5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+  .team-module .columns {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .team-module .column {
+    max-width: 100%; /* Ensure full width for each column */
+    width: 100%;     /* Ensure full width for each column */
+  }
+
+  .team-module .column img,
+  .team-module .column h3,
+  .team-module .description {
+    text-align: center; /* Center-align content for better readability */
+  }
+}

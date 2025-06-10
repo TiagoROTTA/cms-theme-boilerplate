@@ -1,0 +1,159 @@
+[
+    {
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "required": true,
+        "default": "Création de <span>site internet pour votre cabinet</span> d’expertise-comptable"
+    },
+    {
+        "label": "Button",
+        "name": "button",
+        "type": "group",
+        "children": [
+            {
+                "label": "Button Text",
+                "name": "button_text",
+                "type": "text",
+                "default": "voir nos réalisations"
+            },
+            {
+                "label": "Button Link",
+                "name": "button_link",
+                "type": "text",
+                "default": "#"
+            }
+        ]
+    },
+    {
+        "label": "Description",
+        "name": "description",
+        "type": "text",
+        "default": "Nous concevons le site internet de votre cabinet en parfaite adéquation avec vos objectifs : attirer de nouveaux clients, rassurer vos partenaires, séduire des candidats ou renforcer votre visibilité en ligne. Une approche sur mesure pour un impact maximal."
+    },
+    {
+        "label": "Image",
+        "name": "image",
+        "type": "image",
+        "required": false
+    },
+    {
+        "label": "Info Boxes",
+        "name": "info_boxes",
+        "type": "group",
+        "occurrence": {
+            "default": 2,
+            "min": 1
+        },
+        "children": [
+            {
+                "label": "Percentage",
+                "name": "percentage",
+                "type": "text",
+                "required": true
+            },
+            {
+                "label": "Description",
+                "name": "description",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "default": [
+            {
+                "percentage": "+40%",
+                "description": "de visiteurs en plus via votre site internet"
+            },
+            {
+                "percentage": "+40%",
+                "description": "de visiteurs en plus via votre site internet"
+            }
+
+        ]
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Title Font",
+                        "name": "title_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 40,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Description Font",
+                        "name": "description_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 12,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "400"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Button font",
+                        "name": "button_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 14,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "600"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Percentage font",
+                        "name": "percentage_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Pistilli",
+                            "size": 35,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "400"
+                            }
+                        }
+                    },
+                    {
+                        "label": "percentage Description font",
+                        "name": "percentage_description_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 14,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "400"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

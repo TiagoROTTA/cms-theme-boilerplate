@@ -1,0 +1,112 @@
+{%require_css%}
+<style>
+.marquee {
+  max-width: 1800px;
+  overflow: hidden;
+  --speed: 25s;
+  --item-width: 200px;
+  --item-gap: 0px;
+
+  --single-slide-speed: calc(var(--speed) / var(--num-items));
+  --item-width-plus-gap: calc(var(--item-width) + var(--item-gap));
+  --track-width: calc(var(--item-width-plus-gap) * calc(var(--num-items) - 1));
+}
+
+.marquee-track {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: var(--track-width) [track] 0px [resting];
+  width: max-content;
+}
+
+.marquee-item {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  min-width: 0;
+
+  grid-area: resting;
+  animation: marquee-move var(--speed) linear infinite var(
+      --direction,
+      forwards
+    );
+  animation-delay: calc(var(--single-slide-speed) * var(--item-position) * -1);
+}
+
+.marquee-item img {
+  height: 100%;
+  /*width: 150px;*/
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@keyframes marquee-move {
+  to {
+    transform: translateX(calc(-100cqw - 100%));
+  }
+}
+</style>
+{%end_require_css%}
+<section class="logos-animation-module">
+
+<div class="marquee" style="--num-items:{{ module.logos|length if module.logos else 1 }}">
+  <div class="marquee-track">
+    {% if module.logos != null %}
+      {% for logo in module.logos %}
+        <div class="marquee-item" style="--item-position:{{ loop.index }}">
+          <img src="{{ logo.logo.src }}" alt="{{ logo.logo.alt }}" />
+        </div>
+      {% endfor %}
+    {% else %}
+      <!-- Image par défaut si aucune image n'est définie -->
+      <div class="marquee-item" style="--item-position:1">
+        <img src="{{ get_asset_url('../../images/default-client-logo.png') }}" alt="Default Image"/>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+
+
+
+
+
+</section>
+{%require_js%}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.marquee-track');
+  const items = document.querySelectorAll('.marquee-item');
+  const marquee = document.querySelector('.marquee');
+  const screenWidth = marquee.offsetWidth;
+  const gap = parseInt(getComputedStyle(marquee).getPropertyValue('--item-gap')) || 10;
+  let totalWidth = 0;
+  const itemsArray = Array.from(items);
+
+  // Calculer la largeur totale des éléments existants
+  itemsArray.forEach(item => {
+    totalWidth += item.offsetWidth + gap;
+  });
+
+  // Calculer combien d'éléments supplémentaires sont nécessaires
+  // On veut que la largeur totale soit au moins 1.5 fois la largeur de l'écran
+  const targetWidth = screenWidth * 1.5;
+  let currentPosition = items.length;
+
+  while (totalWidth < targetWidth) {
+    const itemToClone = itemsArray[currentPosition % itemsArray.length];
+    const clone = itemToClone.cloneNode(true);
+    clone.style.setProperty('--item-position', currentPosition + 1);
+    track.appendChild(clone);
+    
+    totalWidth += itemToClone.offsetWidth + gap;
+    currentPosition++;
+  }
+
+  // Mettre à jour le nombre total d'éléments
+  marquee.style.setProperty('--num-items', currentPosition);
+});
+</script>
+{%end_require_js%}

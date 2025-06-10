@@ -1,0 +1,100 @@
+.card-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    /* Optionnel: background transparent pour laisser voir le body violet */
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* center the cards horizontally */
+    align-items: stretch;    /* stretch cards to same height */
+    gap: 20px;              /* space between cards */
+    flex-wrap: wrap;        /* allow wrapping on small screens */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1 1 320px;        /* grow, shrink, basis */
+    max-width: 350px;
+    min-width: 280px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 50px 24px;
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(39, 35, 79, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-icon {
+    width: 120px;
+    height: 72px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.card-title {
+    margin: 12px 0 16px 0;
+}
+
+.card-description {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.card-description li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.card-description li::before {
+    content: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.607 8.34136C16.607 12.9272 12.8894 16.6449 8.30352 16.6449C3.71761 16.6449 0 12.9272 0 8.34136C0 3.75545 3.71761 0.0378418 8.30352 0.0378418C12.8894 0.0378418 16.607 3.75545 16.607 8.34136ZM11.6501 5.82512C11.8933 6.06832 11.8933 6.46264 11.6501 6.70582L7.49833 10.8576C7.25512 11.1008 6.86087 11.1008 6.61763 10.8576L4.95693 9.19687C4.71373 8.95366 4.71373 8.55941 4.95693 8.3162C5.20013 8.07299 5.59445 8.07299 5.83765 8.3162L7.05799 9.53649L8.91366 7.68082L10.7694 5.82512C11.0126 5.58192 11.4069 5.58192 11.6501 5.82512Z" fill="white"/></svg>');
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: auto;
+    transition: background 0.2s;
+    width: 80%;
+}
+
+.card-button:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+
+/* Responsive: stack cards vertically only on small screens */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .card {
+        width: 100%;
+        max-width: 95vw;
+        min-width: 0;
+        padding: 24px 12px;
+    }
+}
+

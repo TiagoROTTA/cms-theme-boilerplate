@@ -1,0 +1,57 @@
+{% require_css %}
+<style>
+
+.hero-title {
+    {{module.styles.typography.title_font.css}}
+}
+
+.hero-description {
+    {{module.styles.typography.description_font.css}}
+}
+
+.hero-button {
+    {{module.styles.typography.button_font.css}}
+}
+
+.hero-button:hover {
+    {{module.styles.typography.button_font.css}}
+}
+
+.info-card .percentage {
+    {{module.styles.typography.percentage_font.css}}
+}
+
+.info-card .description {
+    {{module.styles.typography.percentage_description_font.css}}
+}
+
+
+</style>
+{% end_require_css %}
+
+<section class="hero-module fade-in">
+    <div class="hero-container">
+        <div class="hero-left-box">
+            <h1 class="hero-title">{{module.title}}</h1>
+            <a href="{{module.button.button_link}}" class="hero-button">{{module.button.button_text | upper}}</a>
+            <p class="hero-description">{{module.description}}</p>
+        </div>
+        <div class="hero-right-box">
+            {% if module.image.src %}
+                <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" class="hero-image">
+            {% else %}
+                <img src="{{ get_asset_url('../../images/hero-picture.png') }}" alt="Default Image" class="hero-image">
+            {% endif %}
+            <div class="info-cards">
+                {% for item in module.info_boxes %}
+                    <div class="info-card">
+                        <div class="percentage-wrapper">
+                            <p class="percentage ">{{ item.percentage }}</p>
+                        </div>                        
+                        <p class="description">{{ item.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

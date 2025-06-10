@@ -1,0 +1,215 @@
+.qanda-module {
+    margin: 0;
+    padding: 0;
+}
+
+.qanda-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.qanda-item {
+    border-radius: 16px;
+    background: #fff;
+    overflow: visible;
+    position: relative;
+    transition: box-shadow 0.2s;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.qanda-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.qanda-question {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    padding: 20px 0;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 700;
+    color: #23235F;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    transition: none !important;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 16px !important;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Pour s'assurer que le bouton prend toute la place de son parent */
+.qanda-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.qanda-question-text,
+.qanda-toggle-icon {
+    pointer-events: none;
+}
+
+.qanda-question:hover,
+.qanda-question:focus,
+.qanda-question:active {
+    background: none !important;
+    color: #23235F !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    border-radius: 16px !important;
+}
+
+.qanda-toggle-icon {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #3A4C88;
+    margin-right: 8px;
+    margin-left: 40px;
+    flex-shrink: 0;
+    display: inline-block;
+    min-width: 32px;
+    text-align: center;
+    order: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: -2px;
+    line-height: 1.1;
+    vertical-align: middle;
+    position: relative;
+    top: 1px;
+}
+
+.qanda-item.open .qanda-toggle-icon {
+    transform: rotate(225deg);
+}
+
+.qanda-item:not(.open) .qanda-toggle-icon {
+    transform: rotate(0deg);
+}
+
+.qanda-question-text {
+    flex: 1 1 auto;
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    top: 3px;
+}
+
+.qanda-answer {
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0 24px;
+    padding: 0 32px;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 400;
+    color: #23235F;
+    position: relative;
+    z-index: 1;
+    white-space: pre-line;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+    box-shadow: none;
+    border: none;
+}
+
+.qanda-item.open .qanda-answer {
+    max-height: 1000px;
+    opacity: 1;
+    margin-bottom: 24px;
+    padding: 0px 32px 24px 32px;
+    background: #FDFDFD;
+    border: none;
+    transform: translateY(0);
+}
+
+
+@media(max-width: 1000px){
+ .qanda-toggle-icon{
+    margin-left: 15px;
+ }
+}
+
+
+
+@media (max-width: 600px) {
+    .qanda-module {
+        padding: 0;
+    }
+    .qanda-question {
+        padding: 18px 0;
+        font-size: 14px;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 5px;
+    }
+    .qanda-toggle-icon {
+        margin-left: 8px;
+        margin-right: 0px;
+        min-width: 32px;
+        align-self: center;
+        top: 0;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .qanda-question-text {
+        margin: 0;
+        position: static;
+        text-align: left;
+        width: auto;
+        display: inline-block;
+        padding-right: 3px;
+    }
+    .qanda-answer {
+        margin: 0 6px 0 6px;
+        padding: 0 10px;
+        font-size: 15px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(-10px);
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+    .qanda-item.open .qanda-answer {
+        margin-bottom: 18px;
+        padding: 0px 10px;
+        max-height: 1000px;
+        opacity: 1;
+        overflow: visible;
+        border: none;
+        background: #FDFDFD;
+        transform: translateY(0);
+    }
+    .qanda-item {
+        min-width: 0;
+    }
+    .qanda-question {
+        width: 100%;
+        min-width: 0;
+    }
+}

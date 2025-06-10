@@ -1,0 +1,99 @@
+[
+    {
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "default": "Title goes here"
+    },
+    {
+        "label": "Button Text",
+        "name": "button_text",
+        "type": "text",
+        "default": "Lire l'article"
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Title font",
+                        "name": "title_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 30,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "500"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Span Title font",
+                        "name": "span_title_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#E75598",
+                            "font": "Roboto",
+                            "size": 30,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "500"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Article Title font",
+                        "name": "article_title_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 18,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "500"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Description font",
+                        "name": "description_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 12,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Button font",
+                        "name": "button_font",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 14,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "700"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

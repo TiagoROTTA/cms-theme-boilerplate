@@ -1,9 +1,9 @@
 {
-  "label": "Button",
+  "label": "Recent Article",
   "css_assets": [],
   "external_js": [],
   "global": false,
-  "host_template_types": ["PAGE"],
+  "host_template_types": ["PAGE", "BLOG_LISTING"],
   "icon": "../../images/module-icons/cta.svg",
   "js_assets": [],
   "other_assets": [],
@@ -11,6 +11,6 @@
   "tags": [],
   "is_available_for_new_content": true,
   "categories": [
-    "forms_and_buttons"
+    "Commerce"
   ]
 }

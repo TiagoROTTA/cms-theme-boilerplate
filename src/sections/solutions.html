@@ -1,0 +1,81 @@
+<!--
+  templateType: section
+  label: Solutions Section
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/custom_section.png
+  description: "Approche en 3 axes"
+-->
+{% dnd_section class="solutions-section" %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        html={{ context.heading or '<h2>Une approche en <span>3</span> axes pour transformer votre <span>cabinet</span></h2>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        html={{ context.heading or '<p class="section-title-description">Fort de 9 ans d’expérience dans l’accompagnement des cabinets d’expertise comptable, nous avons mis en place une approche spécifique à vos besoins fondée sur 3 axes : le marketing digital, la stratégie commerciale et la gestion interne</p>' }}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/solutions.module",
+        solutions = "{{ context.solutions_cards or '[
+    {
+        \"title\": \"Marketing digital\", 
+        \"description\": \"Augmenter la visibilité et la notoriété du cabinet pour lui permettre d’attirer talents et prospects.\",
+        \"solution_title\": \"Les services populaires\",
+        \"solution_listing\": 
+            [
+                {\"solution\": \"Site internet\"}, 
+                {\"solution\": \"Inbound Marketing\"}, 
+                {\"solution\": \"SEO\"}, 
+                {\"solution\": \"SEA\"}, 
+                {\"solution\": \"Création de contenus\"},
+                {\"solution\": \"Réseaux sociaux\"}
+            ],
+        \"button_text\": \"En savoir plus...\", 
+        \"button_link\": \"#\"
+    },
+    {
+        \"title\": \"Stratégie commerciale\", 
+        \"description\": \"Développer l’activité et les opportunités du cabinet par l’augmentation du CA et la création de nouvelles missions.\",
+        \"solution_title\": \"Les services populaires\",
+        \"solution_listing\": 
+            [
+                {\"solution\": \"Growth hacking\"}, 
+                {\"solution\": \"Supports de vente\"}, 
+                {\"solution\": \"Alignement marketing/vente\"}, 
+                {\"solution\": \"Devis & lettres de missions automatisées\"}, 
+                {\"solution\": \"Lead scoring\"},
+                {\"solution\": \"Lead nurturing\"}
+            ],
+        \"button_text\": \"En savoir plus...\", 
+        \"button_link\": \"#\"
+    },
+    {
+        \"title\": \"CRM\", 
+        \"description\": \"Fluidifier l’ensemble des actions tout en impliquant au maximum le cabinet et les collaborateurs dans ces changements.\",
+        \"solution_title\": \"Les services populaires\",
+        \"solution_listing\": 
+            [
+                {\"solution\": \"Paramétrage CRM\"}, 
+                {\"solution\": \"Qualification de la data\"}, 
+                {\"solution\": \"Automatisation\"}, 
+                {\"solution\": \"Formation\"}, 
+                {\"solution\": \"Tableaux de bord\"},
+                {\"solution\": \"Reporting\"}
+            ],
+        \"button_text\": \"En savoir plus...\", 
+        \"button_link\": \"#\"
+    }
+    ]' }}"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

@@ -1,0 +1,94 @@
+[
+    {
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "default": "Title goes here"
+    },
+    {
+        "label": "Description",
+        "name": "description",
+        "type": "text",
+        "default": "Description goes here"
+    },
+    {
+        "label": "Buttons",
+        "name": "buttons",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "default": 4
+        },
+        "children": [
+            {
+                "label": "Button Text",
+                "name": "button_text",
+                "type": "text",
+                "default": "Go to section"
+            },
+            {
+                "label": "Button Link",
+                "name": "button_link",
+                "type": "text",
+                "default": "#"
+            }
+        ]
+    },
+    {
+        "label": "Styles",
+        "name": "styles",
+        "type": "group",
+        "tab": "STYLE",
+        "children": [
+            {
+                "label": "Typography",
+                "name": "typography",
+                "type": "group",
+                "children": [
+                    {
+                        "label": "Title",
+                        "name": "title",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 30,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "500"
+                            }
+                        }  
+                    },
+                    {
+                        "label": "Description",
+                        "name": "description",
+                        "type": "font",
+                        "default": {
+                            "color": "#27234F",
+                            "font": "Roboto",
+                            "size": 16,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "300"
+                            }
+                        }
+                    },
+                    {
+                        "label": "Button Text",
+                        "name": "button_text",
+                        "type": "font",
+                        "default": {
+                            "color": "#FFFFFF",
+                            "font": "Roboto",
+                            "size": 22,
+                            "size_unit": "px",
+                            "styles": {
+                                "font-weight": "700"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

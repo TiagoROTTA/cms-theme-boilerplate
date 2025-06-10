@@ -1,0 +1,23 @@
+{% require_css %}
+<style>
+
+</style>
+{% end_require_css %}
+<section class="protfolio-module">
+    <div class="portfolio-flex">
+        <div class="first-picture fade-in">
+            {% if module.first_picture.src %}
+                <img src="{{ module.first_picture.src }}" alt="{{ module.first_picture.alt }}" />
+            {% else %}
+                <img src="{{ get_asset_url('../../images/first-portfolio.png') }}" alt="Default Client Logo" />
+            {% endif %}
+        </div>
+        <div class="second-picture fade-in">
+            {% if module.second_picture.src %}
+                <img src="{{ module.second_picture.src }}" alt="{{ module.second_picture.alt }}" />
+            {% else %}
+                <img src="{{ get_asset_url('../../images/second-portfolio.png') }}" alt="Default Client Logo" />
+            {% endif %}
+        </div>
+    </div>
+</section>
